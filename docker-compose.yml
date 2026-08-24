@@ -1,0 +1,85 @@
+# Production stack for Coolify — app + PostgreSQL + Redis in one compose file.
+# Coolify: New Resource → Docker Compose → point at this repo.
+# Domains in Coolify UI must include the internal port, e.g. https://YOUR-DOMAIN:3000
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://YOUR-DOMAIN}
+        NEXT_PUBLIC_WHATSAPP_NUMBER: ${NEXT_PUBLIC_WHATSAPP_NUMBER:-233000000000}
+        NEXT_PUBLIC_PHONE: ${NEXT_PUBLIC_PHONE:-+233 000 000 000}
+        NEXT_PUBLIC_ADDRESS: ${NEXT_PUBLIC_ADDRESS:-Tema & Takoradi Ports, Ghana · Lome, Togo}
+        NEXT_PUBLIC_GOOGLE_REVIEW_URL: ${NEXT_PUBLIC_GOOGLE_REVIEW_URL:-}
+        NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY: ${NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY:-}
+    restart: unless-stopped
+    # Coolify routes via internal network — do not bind host ports (avoids :3000 conflicts).
+    expose:
+      - "3000"
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-mgeswitch}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-mgeswitch}?schema=public
+      REDIS_URL: redis://redis:6379
+      AUTH_SECRET: ${AUTH_SECRET}
+      AUTH_URL: ${AUTH_URL:-https://YOUR-DOMAIN}
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://YOUR-DOMAIN}
+      NEXT_PUBLIC_WHATSAPP_NUMBER: ${NEXT_PUBLIC_WHATSAPP_NUMBER:-233000000000}
+      NEXT_PUBLIC_PHONE: ${NEXT_PUBLIC_PHONE:-+233 000 000 000}
+      NEXT_PUBLIC_ADDRESS: ${NEXT_PUBLIC_ADDRESS:-Tema & Takoradi Ports, Ghana · Lome, Togo}
+      NEXT_PUBLIC_GOOGLE_REVIEW_URL: ${NEXT_PUBLIC_GOOGLE_REVIEW_URL:-}
+      PAYSTACK_SECRET_KEY: ${PAYSTACK_SECRET_KEY:-}
+      NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY: ${NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      RESEND_SMTP_HOST: ${RESEND_SMTP_HOST:-smtp.resend.com}
+      RESEND_SMTP_PORT: ${RESEND_SMTP_PORT:-465}
+      EMAIL_FROM: ${EMAIL_FROM:-MGE-SWITCH <team.tema@YOUR-DOMAIN>}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-team.tema@YOUR-DOMAIN}
+      RUN_DB_SEED: ${RUN_DB_SEED:-true}
+      # Optional S3/R2 media storage (leave unset to use local /uploads volume)
+      S3_BUCKET: ${S3_BUCKET:-}
+      S3_REGION: ${S3_REGION:-auto}
+      S3_ENDPOINT: ${S3_ENDPOINT:-}
+      S3_PUBLIC_URL: ${S3_PUBLIC_URL:-}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID:-}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY:-}
+      S3_FORCE_PATH_STYLE: ${S3_FORCE_PATH_STYLE:-false}
+    volumes:
+      - media_uploads:/app/public/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mgeswitch}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in Coolify env}
+      POSTGRES_DB: ${POSTGRES_DB:-mgeswitch}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-mgeswitch} -d ${POSTGRES_DB:-mgeswitch}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
+  redis_data:
+  media_uploads:

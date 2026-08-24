@@ -1,0 +1,7 @@
+# Local full-stack testing — adds a host port for the app (not used on Coolify).
+# Usage: docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build
+
+services:
+  app:
+    ports:
+      - "${APP_PORT:-3099}:3000"
