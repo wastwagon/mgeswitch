@@ -28,19 +28,19 @@ Open http://localhost:3080
 
 ## What was prepared
 
-- New folder separate from Ulfborg (`/Users/OceanCyber/Downloads/mge-switch`)
+- New folder separate from MGE-SWITCH (`/Users/OceanCyber/Downloads/mge-switch`)
 - Core brand copy, nav, hero, about, services, trust, metadata updated for MGE-SWITCH
 - Env / Coolify templates reset to placeholder domain & contacts
 
 ## Still yours to finish in a new chat
 
 - Real phone, WhatsApp, email, legal address, domain
-- Replace leftover Ulfborg image filenames / gallery media / blog posts
+- Replace leftover MGE-SWITCH image filenames / gallery media / blog posts
 - Admin seed credentials & production Coolify deploy
 - Visual identity (logo/icons still use inherited SVG assets)
 
 ## Sibling project
 
-The original Ulfborg Rebooth project remains intact at:
+The original MGE-SWITCH project remains intact at:
 
-`/Users/OceanCyber/Downloads/ulfborg`
+`/Users/OceanCyber/Downloads/mgeswitch`

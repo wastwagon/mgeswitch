@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-echo "=== Ulfborg Rebooth — local preview ==="
+echo "=== MGE-SWITCH — local preview ==="
 
 if ! docker info >/dev/null 2>&1; then
   echo "Opening Docker Desktop..."
@@ -42,6 +42,6 @@ npm run db:seed
 
 echo ""
 echo "=== App starting at http://localhost:3080 ==="
-echo "Admin: admin@ulfborgrebooth.com / admin123"
+echo "Admin: admin@mge-switch.com / admin123"
 echo ""
 npm run dev

@@ -4,25 +4,25 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: ulfborg-postgres
+    container_name: mgeswitch-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ulfborg
-      POSTGRES_PASSWORD: ulfborg_dev
-      POSTGRES_DB: ulfborg
+      POSTGRES_USER: mgeswitch
+      POSTGRES_PASSWORD: mgeswitch_dev
+      POSTGRES_DB: mgeswitch
     ports:
       - "5438:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ulfborg -d ulfborg"]
+      test: ["CMD-SHELL", "pg_isready -U mgeswitch -d mgeswitch"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: ulfborg-redis
+    container_name: mgeswitch-redis
     restart: unless-stopped
     ports:
       - "6391:6379"

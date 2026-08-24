@@ -15,5 +15,5 @@ fi
 
 mkdir -p public/uploads 2>/dev/null || true
 
-echo "Starting Ulfborg Rebooth..."
+echo "Starting MGE-SWITCH..."
 exec node server.js

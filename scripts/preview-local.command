@@ -1,8 +1,8 @@
 #!/bin/bash
-cd /Users/OceanCyber/Downloads/ulfborg
+cd /Users/OceanCyber/Downloads/mgeswitch
 export PATH="/opt/homebrew/opt/postgresql@14/bin:/opt/homebrew/bin:$PATH"
 
-echo "=== Ulfborg Rebooth local preview ==="
+echo "=== MGE-SWITCH local preview ==="
 
 # Stop any broken previous Next process on 3080
 if lsof -ti :3080 >/dev/null 2>&1; then
@@ -12,10 +12,10 @@ if lsof -ti :3080 >/dev/null 2>&1; then
 fi
 
 # Ensure Postgres role/db exist (Homebrew)
-if ! psql -h 127.0.0.1 -U ulfborg -d ulfborg -c "SELECT 1" >/dev/null 2>&1; then
+if ! psql -h 127.0.0.1 -U mgeswitch -d mgeswitch -c "SELECT 1" >/dev/null 2>&1; then
   echo "Preparing local Postgres database..."
-  psql -h 127.0.0.1 -d postgres -c "CREATE ROLE ulfborg LOGIN PASSWORD 'ulfborg_dev' SUPERUSER;" 2>/dev/null || true
-  psql -h 127.0.0.1 -d postgres -c "CREATE DATABASE ulfborg OWNER ulfborg;" 2>/dev/null || true
+  psql -h 127.0.0.1 -d postgres -c "CREATE ROLE mgeswitch LOGIN PASSWORD 'mgeswitch_dev' SUPERUSER;" 2>/dev/null || true
+  psql -h 127.0.0.1 -d postgres -c "CREATE DATABASE mgeswitch OWNER mgeswitch;" 2>/dev/null || true
 fi
 
 # Ensure Redis responds
@@ -31,9 +31,9 @@ fi
 
 # Point local env at Homebrew services (not Docker ports)
 cat > .env <<'EOF'
-DATABASE_URL="postgresql://ulfborg:ulfborg_dev@127.0.0.1:5432/ulfborg?schema=public"
+DATABASE_URL="postgresql://mgeswitch:mgeswitch_dev@127.0.0.1:5432/mgeswitch?schema=public"
 REDIS_URL="redis://127.0.0.1:6379"
-AUTH_SECRET="ulfborg-local-dev-secret-change-me"
+AUTH_SECRET="mgeswitch-local-dev-secret-change-me"
 AUTH_URL="http://localhost:3080"
 NEXT_PUBLIC_APP_URL="http://localhost:3080"
 NEXT_PUBLIC_WHATSAPP_NUMBER="233596092689"
@@ -45,8 +45,8 @@ NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY=""
 RESEND_API_KEY=""
 RESEND_SMTP_HOST="smtp.resend.com"
 RESEND_SMTP_PORT="465"
-EMAIL_FROM="Ulfborg Rebooth <onboarding@resend.dev>"
-ADMIN_EMAIL="team.tema@ulfborgrebooth.com"
+EMAIL_FROM="MGE-SWITCH <onboarding@resend.dev>"
+ADMIN_EMAIL="ops@mge-switch.com"
 EOF
 
 echo "Installing dependencies..."
@@ -61,7 +61,7 @@ echo ""
 echo "============================================"
 echo "  Preview:  http://localhost:3080"
 echo "  Admin:    http://localhost:3080/login"
-echo "  Email:    admin@ulfborgrebooth.com"
+echo "  Email:    admin@mge-switch.com"
 echo "  Password: admin123"
 echo "============================================"
 echo ""

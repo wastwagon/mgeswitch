@@ -70,25 +70,25 @@ var PrismaClient = getPrismaClientClass();
 // src/lib/blog-images.ts
 var BLOG_IMAGES = {
   "how-fast-vessel-supply-support-protects-turnaround": {
-    image: "/gallery/ulfborg-ship-provisions-container-01.jpeg",
-    imageAlt: "Ulfborg Rebooth marine supply cargo staged inside a shipping container"
+    image: "/gallery/mgeswitch-ship-provisions-container-01.jpeg",
+    imageAlt: "MGE-SWITCH marine supply cargo staged inside a shipping container"
   },
   "what-good-marine-provisioning-looks-like-in-west-africa": {
-    image: "/gallery/ulfborg-marine-cabin-stores-02.jpeg",
+    image: "/gallery/mgeswitch-marine-cabin-stores-02.jpeg",
     imageAlt: "Marine provisions and cabin stores prepared for vessel delivery"
   },
   "nautical-publications-and-why-bridge-teams-cannot-compromise": {
-    image: "/images/ulfborg-nautical.svg",
+    image: "/images/mgeswitch-nautical.svg",
     imageAlt: "Nautical publications and navigation planning materials"
   },
   "choosing-lubricants-and-consumables-for-harsh-marine-environments": {
-    image: "/images/ulfborg-lubricants.svg",
+    image: "/images/mgeswitch-lubricants.svg",
     imageAlt: "Marine lubricants and consumables for harsh operating conditions"
   }
 };
 function getBlogImageMeta(slug, fallbackTitle) {
   return BLOG_IMAGES[slug] ?? {
-    image: "/gallery/ulfborg-ship-provisions-container-01.jpeg",
+    image: "/gallery/mgeswitch-ship-provisions-container-01.jpeg",
     imageAlt: fallbackTitle
   };
 }
@@ -246,10 +246,10 @@ async function main() {
   console.log("Seeding database...");
   const adminPassword = await bcrypt.hash("admin123", 12);
   const admin = await prisma2.user.upsert({
-    where: { email: "admin@ulfborgrebooth.com" },
+    where: { email: "admin@mge-switch.com" },
     update: {},
     create: {
-      email: "admin@ulfborgrebooth.com",
+      email: "admin@mge-switch.com",
       name: "Admin",
       passwordHash: adminPassword,
       role: "ADMIN",
@@ -262,7 +262,7 @@ async function main() {
       id: "executive-sedan",
       name: "Technical Stores",
       description: "Engine-room consumables, tools, and vessel-ready technical products sourced with specification in mind.",
-      imageUrl: "/images/ulfborg-lubricants.svg",
+      imageUrl: "/images/mgeswitch-lubricants.svg",
       capacity: 3,
       basePrice: 150,
       pricePerKm: 8,
@@ -272,7 +272,7 @@ async function main() {
       id: "premium-suv",
       name: "Safety & Welfare",
       description: "Safety equipment, crew welfare items, and day-to-day support products for comfortable, compliant operations.",
-      imageUrl: "/images/ulfborg-safety.svg",
+      imageUrl: "/images/mgeswitch-safety.svg",
       capacity: 5,
       basePrice: 220,
       pricePerKm: 10,
@@ -282,7 +282,7 @@ async function main() {
       id: "luxury-van",
       name: "Navigation & Publications",
       description: "Nautical publications, charts, and specialty navigation support for bridge teams and vessel operators.",
-      imageUrl: "/images/ulfborg-nautical.svg",
+      imageUrl: "/images/mgeswitch-nautical.svg",
       capacity: 10,
       basePrice: 350,
       pricePerKm: 12,
@@ -300,27 +300,27 @@ async function main() {
   const cmsPages = [
     {
       slug: "about",
-      title: "About Ulfborg Rebooth",
+      title: "About MGE-SWITCH",
       excerpt: "A Ghanaian marine and offshore supply partner with West African reach.",
-      content: "<h2>Our mission</h2><p>Ulfborg Rebooth delivers premium marine and offshore support through dependable sourcing, responsive coordination, and vessel-focused service across West African ports.</p><h2>Headquarters</h2><p>We are headquartered at the Heavy Industrial Area Enclave, Tema, Ghana.</p>",
-      metaTitle: "About Ulfborg Rebooth",
-      metaDescription: "Learn about Ulfborg Rebooth and our marine supply support network across West Africa."
+      content: "<h2>Our mission</h2><p>MGE-SWITCH delivers premium marine and offshore support through dependable sourcing, responsive coordination, and vessel-focused service across West African ports.</p><h2>Headquarters</h2><p>We are headquartered at the Heavy Industrial Area Enclave, Tema, Ghana.</p>",
+      metaTitle: "About MGE-SWITCH",
+      metaDescription: "Learn about MGE-SWITCH and our marine supply support network across West Africa."
     },
     {
       slug: "privacy-policy",
       title: "Privacy Policy",
-      excerpt: "How Ulfborg Rebooth collects, uses, and protects your personal data.",
+      excerpt: "How MGE-SWITCH collects, uses, and protects your personal data.",
       content: "<h2>Information we collect</h2><p>When you submit an enquiry or contact our team, we collect your name, email, phone number, company details, and request information necessary to respond effectively.</p><h2>How we use your data</h2><ul><li>To review and respond to enquiries</li><li>To coordinate service delivery and support</li><li>To improve our operational communication</li></ul><h2>Data retention</h2><p>Enquiry records are retained for operational and legal purposes. You may request deletion of non-essential data by contacting us.</p>",
-      metaTitle: "Privacy Policy | Ulfborg Rebooth",
-      metaDescription: "Privacy policy for Ulfborg Rebooth marine supply enquiries."
+      metaTitle: "Privacy Policy | MGE-SWITCH",
+      metaDescription: "Privacy policy for MGE-SWITCH marine supply enquiries."
     },
     {
       slug: "terms-of-service",
       title: "Terms of Service",
-      excerpt: "Terms and conditions for Ulfborg Rebooth enquiries and service delivery.",
+      excerpt: "Terms and conditions for MGE-SWITCH enquiries and service delivery.",
       content: "<h2>Enquiries and Supply</h2><p>All service requests are subject to product availability, vessel timing, and confirmed delivery details. Quotations and commitments are based on the final agreed scope.</p><h2>Changes</h2><p>Amendments to timing, specification, or quantities may affect availability and pricing. We encourage clients to communicate updates promptly.</p><h2>Safety and Compliance</h2><p>We reserve the right to decline requests that conflict with operational safety, compliance requirements, or lawful trade practice.</p>",
-      metaTitle: "Terms of Service | Ulfborg Rebooth",
-      metaDescription: "Terms and conditions for Ulfborg Rebooth marine supply services."
+      metaTitle: "Terms of Service | MGE-SWITCH",
+      metaDescription: "Terms and conditions for MGE-SWITCH marine supply services."
     }
   ];
   for (const page of cmsPages) {
@@ -352,14 +352,14 @@ async function main() {
   }
   console.log("Blog posts seeded");
   for (const [key, value] of Object.entries({
-    site_name: "Ulfborg Rebooth",
+    site_name: "MGE-SWITCH",
     site_tagline: "Premium Marine & Offshore Supply Solutions",
     contact_phone: "+233 596 092 689",
     contact_whatsapp: "233596092689",
-    contact_email: "team.tema@ulfborgrebooth.com",
+    contact_email: "ops@mge-switch.com",
     contact_address: "Heavy Industrial Area Enclave, Tema, Ghana",
-    seo_default_description: "Ulfborg Rebooth is a Ghanaian marine and offshore supply firm supporting vessels with provisions, technical stores, lubricants, nautical publications, and responsive West African port coverage.",
-    seo_og_image: "/images/ulfborg-og.svg",
+    seo_default_description: "MGE-SWITCH is a Ghanaian marine and offshore supply firm supporting vessels with provisions, technical stores, lubricants, nautical publications, and responsive West African port coverage.",
+    seo_og_image: "/images/mgeswitch-og.svg",
     maintenance_mode: "false"
   })) {
     await prisma2.siteSetting.upsert({

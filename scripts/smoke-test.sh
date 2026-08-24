@@ -1,5 +1,5 @@
 #!/bin/bash
-# Pre-production smoke test for Ulfborg Rebooth
+# Pre-production smoke test for MGE-SWITCH
 BASE="http://localhost:3080"
 PASS=0
 FAIL=0
