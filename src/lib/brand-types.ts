@@ -57,7 +57,7 @@ export function mapSettingsToBrand(settings: BrandSettingsInput): BrandConfig {
 /** Static fallback for client components before hydration */
 export const STATIC_BRAND: BrandConfig = {
   name: "MGE-SWITCH",
-  tagline: "Ship Agency & Allied Services",
+  tagline: "Ship Agency, Husbandry & Oil & Gas Upstream",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "+233 000 000 000",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233000000000",
   email: "ops@mge-switch.com",
@@ -65,7 +65,7 @@ export const STATIC_BRAND: BrandConfig = {
     process.env.NEXT_PUBLIC_ADDRESS ??
     "Tema & Takoradi Ports, Ghana · Lome, Togo",
   seoDescription:
-    "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
+    "MGE-SWITCH is a Ghanaian-registered ship agency, husbandry, and oil and gas upstream services provider. Ground operations cover Tema and Takoradi — Ghana’s two principal ports — with allied coverage at Lome, West Africa’s key transit hub.",
   ogImage: "/images/mge-switch-og.svg",
   maintenanceMode: false,
   maintenanceMessage: "",

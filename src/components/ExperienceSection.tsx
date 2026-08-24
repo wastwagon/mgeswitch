@@ -9,7 +9,7 @@ export function ExperienceSection() {
         <div className="relative min-h-[400px] lg:min-h-[600px]">
           <Image
             src={IMAGES.meetGreet}
-            alt="Packed marine supply cargo secured inside a container"
+            alt="Ship agency attendance during a commercial port call"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -19,25 +19,25 @@ export function ExperienceSection() {
 
         <div className="flex flex-col justify-center px-6 py-16 sm:px-12 sm:py-24 lg:px-16">
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-            Supply Execution
+            Port Attendance
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl">
-            Staged with care.
+            Prepared with care.
             <br />
-            Delivered with urgency.
+            Attended with urgency.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-white/75">
-            Every delivery is shaped around operational readiness: carefully
-            selected products, practical packing, responsive communication, and
-            a service approach built to protect vessel turnaround at port and
-            offshore support points.
+            Every call is shaped around operational readiness: clear formalities,
+            crew and spares coordination, responsive communication, and a service
+            approach built to protect vessel turnaround in Tema, Takoradi, and
+            Lome.
           </p>
           <ul className="mt-8 space-y-4">
             {[
-              "Quality-led product selection",
-              "Cargo prepared for safe handling",
-              "Fast response to urgent requirements",
-              "Regional support across multiple West African ports",
+              "Agency attendance organised around ETA/ETD",
+              "Crew, spares, and husbandry sequenced as one plan",
+              "Oil and gas upstream support through Takoradi and Tema",
+              "Focused coverage in Tema, Takoradi, and Lome",
             ].map((item) => (
               <li
                 key={item}

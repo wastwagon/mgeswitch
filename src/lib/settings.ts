@@ -30,7 +30,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   contact_email: BRAND.email,
   contact_address: BRAND.address,
   seo_default_description:
-    "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
+    "MGE-SWITCH is a Ghanaian-registered ship agency, husbandry, and oil and gas upstream services provider. Ground operations cover Tema and Takoradi — Ghana’s two principal ports — with allied coverage at Lome, West Africa’s key transit hub.",
   seo_og_image: "/images/mge-switch-og.svg",
   social_facebook: "",
   social_instagram: "",

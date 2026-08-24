@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
-  <rect width="1200" height="630" fill="#0B1F3A"/>
-  <rect x="0" y="520" width="1200" height="110" fill="#09182E"/>
-  <path d="M180 390 L360 220 L540 390" stroke="#C9A227" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M250 390 H470" stroke="#C9A227" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="360" cy="420" r="14" fill="#C9A227"/>
-  <text x="600" y="300" fill="#FFFFFF" font-family="Georgia, serif" font-size="72" font-weight="700">MGE-SWITCH</text>
-  <text x="600" y="360" fill="#C9A227" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">SHIP AGENCY &amp; ALLIED SERVICES</text>
-  <text x="600" y="420" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="24">Tema · Takoradi · Lome</text>
+  <rect width="1200" height="630" fill="#0E3D3A"/>
+  <rect x="0" y="0" width="8" height="630" fill="#E07A2F"/>
+  <circle cx="250" cy="315" r="118" fill="#0A2A28"/>
+  <circle cx="250" cy="315" r="100" fill="none" stroke="#E07A2F" stroke-width="3.5"/>
+  <circle cx="250" cy="215" r="6" fill="#E07A2F"/>
+  <circle cx="337" cy="365" r="6" fill="#E07A2F"/>
+  <circle cx="163" cy="365" r="6" fill="#E07A2F"/>
+  <path d="M216 270 C216 250 284 250 284 278 C284 304 216 306 216 336 C216 366 284 366 284 350" fill="none" stroke="#F3EFE6" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="250" cy="315" r="16" fill="#E07A2F"/>
+  <circle cx="250" cy="315" r="6" fill="#F3EFE6"/>
+  <text x="430" y="290" fill="#F3EFE6" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700">MGE</text>
+  <text x="620" y="286" fill="#E07A2F" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="8">SWITCH</text>
+  <text x="430" y="350" fill="#F3EFE6" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="3">SHIP AGENCY · HUSBANDRY · OIL &amp; GAS</text>
+  <text x="430" y="400" fill="#F3EFE6" fill-opacity="0.55" font-family="Arial, Helvetica, sans-serif" font-size="20">Tema · Takoradi · Lome</text>
 </svg>

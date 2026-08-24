@@ -11,11 +11,11 @@ import { IMAGES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "Enquiries",
   description:
-    "Send ship agency, vessel support, and regional port enquiries to MGE-SWITCH.",
+    "Send ship agency, husbandry, oil and gas upstream, and regional port enquiries to MGE-SWITCH.",
   openGraph: {
     title: "Ship Agency Enquiries | MGE-SWITCH",
     description:
-      "A premium enquiry channel for technical stores, provisions, and regional vessel support.",
+      "A premium enquiry channel for ship agency, crew change, spares, and protective attendance.",
     images: [{ url: IMAGES.fleet.suv, width: 1200, height: 630, alt: "MGE-SWITCH enquiries" }],
   },
 });

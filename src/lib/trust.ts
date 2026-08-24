@@ -54,13 +54,23 @@ export const TESTIMONIALS = [
     quote:
       "Protective attendance was attentive and efficient — exactly the independent cover we needed during turnaround.",
   },
+  {
+    id: "5",
+    name: "Offshore Logistics Lead",
+    initials: "OL",
+    location: "Energy corridor",
+    rating: 5,
+    date: "Takoradi campaign",
+    quote:
+      "OSV attendance, crew rotations, and stores ran as one plan through Takoradi — with Lome available when the transit option was needed.",
+  },
 ] as const;
 
 export const FOOTER_PROOF = [
   {
     id: "registered",
     title: "Registered Ghanaian agency",
-    detail: "Tema and Takoradi, with allied cover in Lome",
+    detail: "Agency, husbandry & oil and gas — Tema, Takoradi, and Lome",
   },
   {
     id: "owners",
@@ -84,7 +94,7 @@ export const CREDENTIALS = [
     id: "licensed",
     title: "Registered Ghanaian Agency",
     description:
-      "Ship agency and allied services provider operating in Tema, Takoradi, and Lome",
+      "Ship agency, husbandry, and oil and gas upstream support in Tema, Takoradi, and Lome",
   },
   {
     id: "insured",
@@ -95,7 +105,7 @@ export const CREDENTIALS = [
   {
     id: "registered",
     title: "Strategic Port Coverage",
-    description: `Tema & Takoradi, Ghana · Lome, Togo · ${BRAND.address}`,
+    description: "Tema & Takoradi, Ghana · Lome, Togo",
   },
   {
     id: "secure-pay",

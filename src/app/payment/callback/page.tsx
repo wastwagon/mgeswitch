@@ -62,8 +62,8 @@ export default function PaymentCallbackPage() {
               {formatCurrency(Number(booking.quotedPrice))}
             </p>
             <p className="mt-4 text-sm text-muted">
-              A confirmation will be sent to your email. Our driver will contact
-              you before pickup.
+              A confirmation will be sent to your email. Our operations team will contact
+              you before attendance.
             </p>
             <Link
               href="/booking/status"

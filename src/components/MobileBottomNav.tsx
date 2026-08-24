@@ -9,7 +9,7 @@ const tabs = [
   { href: "/", label: "Home", icon: Home, match: (p: string) => p === "/" },
   {
     href: "/services",
-    label: "Supply",
+    label: "Services",
     icon: BriefcaseBusiness,
     match: (p: string) => p.startsWith("/services"),
   },
@@ -54,7 +54,7 @@ export function MobileBottomNav({ onMenuOpen }: MobileBottomNavProps) {
         })}
         <a
           href={buildWhatsAppUrl(
-            "Hello MGE-SWITCH, I need support with a vessel supply request."
+            "Hello MGE-SWITCH, I need ship agency support for an upcoming port call."
           )}
           target="_blank"
           rel="noopener noreferrer"

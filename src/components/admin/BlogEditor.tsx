@@ -33,11 +33,11 @@ interface BlogEditorProps {
 }
 
 const CATEGORIES = [
-  "Marine Supply",
-  "Offshore Operations",
-  "Port Coverage",
-  "Procurement & Quality",
-  "Safety & Compliance",
+  "Ship Agency",
+  "Crew Change",
+  "Protective Agency",
+  "Port Operations",
+  "Husbandry",
 ];
 
 function slugify(value: string) {

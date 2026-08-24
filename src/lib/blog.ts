@@ -124,6 +124,100 @@ export const RAW_BLOG_POSTS = [
       },
     ],
   },
+  {
+    slug: "anatomy-of-a-full-port-call-in-ghana",
+    title: "The Anatomy of a Full Port Call in Ghana",
+    excerpt:
+      "A Ghanaian-registered agency desk should cover arrivals, port operations, husbandry, and departure — not only inward papers.",
+    category: "Operations",
+    publishedAt: "2026-08-20",
+    readTime: "6 min read",
+    sections: [
+      {
+        paragraphs: [
+          "Owners often appoint an agent for clearance and then discover the rest of the call is still unmanaged. Arrivals, berth windows, crew, stores, surveys, and outward formalities all compete for the same hours alongside.",
+          "MGE-SWITCH is built around the full port call. We handle arrivals, port operations, husbandry, and departure so owners, charterers, and operators keep one accountable desk in Tema and Takoradi, with allied cover at Lome.",
+        ],
+      },
+      {
+        heading: "What “every aspect of the call” actually includes",
+        bullets: [
+          "Notice of arrival, inward clearance, and first-line attendance",
+          "Stay management with authorities, cargo, and husbandry sequenced together",
+          "Crew, spares, surveys, travel, and welfare treated as part of the operational plan",
+          "Outward formalities and a clean handover when the vessel sails",
+        ],
+      },
+      {
+        heading: "Why the Ghana corridor needs a ground desk",
+        paragraphs: [
+          "Tema is Ghana’s eastern commercial gateway. Takoradi is the western energy and project hub. Lome is West Africa’s key transit port. Traffic that moves across this corridor needs local representation that already understands each port’s rhythm — not a last-minute introduction.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "oil-and-gas-upstream-support-from-tema-and-takoradi",
+    title: "Oil & Gas Upstream Support from Tema and Takoradi",
+    excerpt:
+      "Ghana’s energy corridor needs agency and husbandry that can attend OSVs, tankers, and campaign traffic — not only conventional liner calls.",
+    category: "Oil & Gas",
+    publishedAt: "2026-08-18",
+    readTime: "5 min read",
+    sections: [
+      {
+        paragraphs: [
+          "Alongside conventional ship agency, MGE-SWITCH supports oil and gas upstream traffic through Ghana’s two principal ports. Takoradi sits at the centre of offshore logistics. Tema remains a commercial and campaign gateway. Lome is available when the region’s transit hub is the right call.",
+        ],
+      },
+      {
+        heading: "What upstream-related attendance looks like",
+        bullets: [
+          "Agency for OSVs, tankers, and project vessels",
+          "Crew rotations timed to offshore windows",
+          "Stores and spares coordinated around campaign plans",
+          "Protective attendance when owners need independent cover",
+        ],
+      },
+      {
+        heading: "One desk across the energy corridor",
+        paragraphs: [
+          "Campaign traffic rarely stays in a single port. A Ghanaian-registered partner with ground operations in Tema and Takoradi, plus allied coverage at Lome, keeps nominations, husbandry, and reporting on one channel instead of three unconnected introductions.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "lome-west-africa-transit-hub-for-vessel-operators",
+    title: "Why Lome Matters as West Africa’s Transit Hub",
+    excerpt:
+      "Lome is more than a neighbouring port. For operators moving through the Ghana–Togo corridor, it is the region’s key transit option — best served from the same desk as Tema and Takoradi.",
+    category: "Ports",
+    publishedAt: "2026-08-16",
+    readTime: "4 min read",
+    sections: [
+      {
+        paragraphs: [
+          "West African itineraries often include a transit or transhipment call at Lome. Treating that call as a separate relationship creates friction: new contacts, delayed papers, and no continuity with the Ghana programme.",
+        ],
+      },
+      {
+        heading: "What allied coverage at Lome provides",
+        bullets: [
+          "Ship agency attendance for transit and commercial calls",
+          "Protective representation when owners require independent cover",
+          "Documentation and turnaround support aligned with the Ghana desk",
+          "Continuity for vessels that also call Tema or Takoradi",
+        ],
+      },
+      {
+        heading: "Nominate once, cover the corridor",
+        paragraphs: [
+          "MGE-SWITCH’s ground operations are in Tema and Takoradi. Allied coverage at Lome means owners can nominate one Ghanaian-registered agency for Ghana’s two principal ports and West Africa’s key transit hub — arrivals through departure, on a single accountable channel.",
+        ],
+      },
+    ],
+  },
 ] satisfies Omit<BlogPost, "image" | "imageAlt">[];
 
 type DbBlogPost = {
@@ -158,7 +252,15 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       orderBy: { publishedAt: "desc" },
     });
     if (posts.length > 0) {
-      return withImages(posts.map(mapDbPost));
+      const fromDb = withImages(posts.map(mapDbPost));
+      const dbSlugs = new Set(fromDb.map((p) => p.slug));
+      const extras = withImages(
+        RAW_BLOG_POSTS.filter((p) => !dbSlugs.has(p.slug))
+      );
+      return [...fromDb, ...extras].sort(
+        (a, b) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      );
     }
   } catch {
     // fall through to static posts
@@ -182,4 +284,12 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   }
   const found = RAW_BLOG_POSTS.find((p) => p.slug === slug);
   return found ? withImages([found])[0] : null;
+}
+
+export async function getRelatedPosts(
+  slug: string,
+  limit = 3
+): Promise<BlogPost[]> {
+  const posts = await getBlogPosts();
+  return posts.filter((post) => post.slug !== slug).slice(0, limit);
 }

@@ -10,12 +10,12 @@ export function ServiceCatalogue() {
             Service Catalogue
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
-            Detailed supply lines with product depth
+            Agency lines with operational depth
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Each category pairs descriptive capability copy with the product
-            ranges vessels actually request — designed as a premium procurement
-            profile, not a placeholder brochure.
+            Each category pairs capability copy with the work vessels actually
+            need alongside — written as a premium agency profile, not a generic
+            brochure.
           </p>
         </div>
 

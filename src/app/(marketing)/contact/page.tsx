@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const brand = await getBrandConfig();
   return createMetadata({
     title: "Contact",
-    description: `Contact ${brand.name} for ship agency, husbandry, crew change, and protective agency support in Tema, Takoradi, and Lome.`,
+    description: `Contact ${brand.name} for ship agency, husbandry, oil and gas upstream, crew change, and protective agency support in Tema, Takoradi, and Lome.`,
     openGraph: {
       title: `Contact Us | ${brand.name}`,
       description: `Call ${brand.phone} or WhatsApp our team for vessel agency and port-call appointments.`,
@@ -52,7 +52,7 @@ export default async function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Speak with a ship agency team that understands urgency"
-        description="Reach MGE-SWITCH for appointments in Tema, Takoradi, and Lome — agency, husbandry, crew change, spares, and protective cover."
+        description="Reach MGE-SWITCH for appointments in Tema, Takoradi, and Lome — agency, husbandry, oil and gas upstream, crew change, spares, and protective cover."
         image={IMAGES.meetGreet}
         imageAlt={`Contact ${brand.name}`}
         minHeight="min-h-[42vh]"
@@ -68,9 +68,9 @@ export default async function ContactPage() {
               Direct access to our operations network
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Whether you need urgent technical stores, fresh provisions,
-              nautical publications, lubricants, ropes, or welfare items, our
-              team responds with practical guidance and clear communication.
+              Whether you need agency attendance, crew change, spares delivery,
+              or protective cover in Tema, Takoradi, or Lome, our team responds
+              with practical guidance and clear communication.
             </p>
 
             <ul className="mt-10 space-y-6">
@@ -119,7 +119,7 @@ export default async function ContactPage() {
                   </p>
                   <a
                     href={buildWhatsAppUrl(
-                      "Hello MGE-SWITCH, I would like to discuss a vessel supply requirement.",
+                      "Hello MGE-SWITCH, I would like to discuss ship agency support for a port call.",
                       brand.whatsapp
                     )}
                     target="_blank"

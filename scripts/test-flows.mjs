@@ -103,7 +103,7 @@ async function main() {
           luggageCount: 1,
           customerName: "Flow Test User",
           customerEmail: "flow-test@example.com",
-          customerPhone: "0555207204",
+          customerPhone: "0550000000",
           paymentMethod: "WHATSAPP",
           specialRequests: "Automated smoke test — safe to delete",
         });

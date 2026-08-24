@@ -4,9 +4,9 @@ const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3080";
 
 export const siteConfig = {
   name: "MGE-SWITCH",
-  tagline: "Ship Agency & Allied Services",
+  tagline: "Ship Agency, Husbandry & Oil & Gas Upstream",
   description:
-    "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo — local representatives for shipowners, charterers, and operators of all vessel types.",
+    "MGE-SWITCH is a Ghanaian-registered ship agency, husbandry, and oil and gas upstream services provider. Ground operations cover Tema and Takoradi — Ghana’s two principal ports — with allied coverage at Lome, West Africa’s key transit hub. We handle every aspect of the vessel port call: arrivals, operations, and departure.",
   url: siteUrl,
   ogImage: "/images/mge-switch-og.svg",
   twitterHandle: "",
@@ -25,7 +25,9 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
       "ship agency Ghana",
       "ship agency Tema",
       "ship agency Takoradi",
-      "ship agency Lome",
+      "oil and gas agency Ghana",
+      "ship agency Takoradi oil and gas",
+      "Lome port ship agency",
       "crew change Ghana",
       "protective agency West Africa",
       "ship spares clearing Tema",

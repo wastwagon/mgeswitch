@@ -21,11 +21,11 @@ export function FAQSection({ showHeader = true }: { showHeader?: boolean }) {
                 Questions before you enquire
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
-                Practical answers about our marine supply scope, vessel support
+                Practical answers about our ship agency scope, vessel support
                 categories, and West African port coverage.
               </p>
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233596092689"}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233000000000"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block text-sm font-semibold text-navy underline underline-offset-4"
@@ -37,11 +37,11 @@ export function FAQSection({ showHeader = true }: { showHeader?: boolean }) {
             <div className="lg:col-span-2">
               <p className="text-sm leading-relaxed text-muted">
                 Can&apos;t find what you&apos;re looking for? Our operations team
-                is available on WhatsApp for vessel supply and port-support
+                is available on WhatsApp for ship agency and port-attendance
                 questions.
               </p>
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233596092689"}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233000000000"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-block text-sm font-semibold text-navy underline underline-offset-4"

@@ -96,7 +96,7 @@ export function customerBookingConfirmationHtml(
   paid: boolean
 ): string {
   const headline = paid
-    ? "Your supply request is confirmed"
+    ? "Your appointment request is confirmed"
     : "We've received your request";
 
   const intro = paid

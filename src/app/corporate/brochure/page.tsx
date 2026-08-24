@@ -9,25 +9,25 @@ import "./brochure.css";
 
 const CAPABILITIES = [
   {
-    name: "Technical Ship Supply",
+    name: "Ship Agency & Husbandry",
     image: IMAGES.fleet.sedan,
-    capacity: "Premium supply support",
+    capacity: "Port-call representation",
     description:
-      "Engine-room consumables, deck items, tools, and technical products sourced with vessel specification in mind.",
+      "ETA/ETD, port stay, documentation, visas, travel, accommodation, surveys, and P&I coordination.",
   },
   {
-    name: "Provisions & Welfare Stores",
+    name: "Crew Change & Spares",
     image: IMAGES.fleet.suv,
-    capacity: "Crew-focused sourcing",
+    capacity: "Joiners, leavers, and parts",
     description:
-      "Food stores, toiletries, linens, and daily-use essentials selected to support hygiene, morale, and onboard comfort.",
+      "Crew rotations plus clearing and onboard delivery of ship spares, including supply-boat arrangements.",
   },
   {
-    name: "Navigation, Safety & Specialty Items",
+    name: "Protective Agency",
     image: IMAGES.fleet.van,
-    capacity: "Operational readiness",
+    capacity: "Owner-focused attendance",
     description:
-      "Nautical publications, mooring gear, lubricants, medical supplies, and safety items for demanding marine operations.",
+      "Independent protective representation that prioritises security and efficient vessel turnaround.",
   },
 ] as const;
 
@@ -55,9 +55,10 @@ export default function BrochurePage() {
           <div className="brochure-logo">
             <Logo variant="light" />
           </div>
-          <h1 className="brochure-cover-title">Marine Supply Capabilities</h1>
+          <h1 className="brochure-cover-title">Ship Agency Capabilities</h1>
           <p className="brochure-cover-subtitle">
-            Premium vessel support from Tema across West African ports
+            Ghanaian-registered ship agency, husbandry, and oil & gas upstream
+            support — Tema, Takoradi, and Lome as West Africa’s key transit hub
           </p>
           <p className="brochure-cover-meta">{BRAND.address} · {BRAND.phone}</p>
         </div>
@@ -66,19 +67,20 @@ export default function BrochurePage() {
       {/* About */}
       <section className="brochure-page">
         <p className="brochure-eyebrow">About Us</p>
-        <h2 className="brochure-heading">A Ghanaian marine support partner with regional reach</h2>
+        <h2 className="brochure-heading">A Ghanaian ship agency with focused port coverage</h2>
         <p className="brochure-body">
-          MGE-SWITCH is an indigenous Ghanaian marine and offshore supply
-          company serving vessel operators with responsive coordination,
-          quality-focused sourcing, and practical port support. Headquartered in
-          Tema, we extend service across Takoradi, Lome, Cotonou, Apapa, and Monrovia.
+          MGE-SWITCH is a Ghanaian-registered ship agency, husbandry, and oil
+          and gas upstream services provider. Ground operations cover Tema and
+          Takoradi — Ghana’s two principal ports — with allied coverage at Lome,
+          West Africa’s key transit hub. We handle every aspect of the vessel
+          port call: arrivals, port operations, husbandry, and departure.
         </p>
         <div className="brochure-stats">
           {[
-            { v: "20+", l: "Years Exposure" },
-            { v: "6", l: "Port Locations" },
-            { v: "24/7", l: "Response Mindset" },
+            { v: "3", l: "Ports Covered" },
+            { v: "24/7", l: "Operations Mindset" },
             { v: "100%", l: "Client Focus" },
+            { v: "All", l: "Vessel Types" },
           ].map((s) => (
             <div key={s.l} className="brochure-stat">
               <strong>{s.v}</strong>
@@ -90,7 +92,7 @@ export default function BrochurePage() {
 
       {/* Capabilities */}
       <section className="brochure-page">
-        <p className="brochure-eyebrow">What We Supply</p>
+        <p className="brochure-eyebrow">What We Handle</p>
         <h2 className="brochure-heading">Core service lines</h2>
         <div className="brochure-fleet">
           {CAPABILITIES.map((v) => (
@@ -106,23 +108,61 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Energy corridor */}
       <section className="brochure-page">
-        <p className="brochure-eyebrow">Operational Scope</p>
-        <h2 className="brochure-heading">Tailored for vessels and offshore teams</h2>
+        <p className="brochure-eyebrow">Energy Corridor</p>
+        <h2 className="brochure-heading">Oil & gas upstream, plus Lome as the transit hub</h2>
+        <p className="brochure-body">
+          Alongside conventional agency and husbandry, we support oil and gas
+          upstream traffic through Takoradi and Tema — OSVs, tankers, and
+          campaign vessels — with allied coverage at Lome, West Africa’s key
+          transit hub. Owners keep one Ghanaian-registered desk across the
+          corridor.
+        </p>
         <div className="brochure-services">
           {[
             {
-              t: "Vessel Turnaround Support",
-              d: "Urgent and planned sourcing coordinated around the realities of port windows, launch schedules, and onboard operational pressure.",
+              t: "Takoradi",
+              d: "Western energy and project hub — agency, crew rotations, stores, and protective attendance for offshore-related calls.",
             },
             {
-              t: "Crew Welfare & Safety",
-              d: "Store selection shaped around comfort, hygiene, safety, and health so crews remain properly supported throughout the voyage.",
+              t: "Tema",
+              d: "Eastern commercial gateway — liner, tanker, project, and energy-related port calls with full husbandry cover.",
             },
             {
-              t: "Regional Port Continuity",
-              d: "A single partner with Ghana roots and West African reach, helping operators maintain a dependable standard across multiple calls.",
+              t: "Lome",
+              d: "Regional transit and transhipment option, coordinated from the same operations channel as Ghana.",
+            },
+          ].map((s) => (
+            <div key={s.t} className="brochure-service">
+              <h3>{s.t}</h3>
+              <p>{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="brochure-page">
+        <p className="brochure-eyebrow">Operational Scope</p>
+        <h2 className="brochure-heading">Built around real port calls</h2>
+        <div className="brochure-services">
+          {[
+            {
+              t: "Agency & Husbandry",
+              d: "Documentation, port stay, visas, travel, hotels, surveys, and P&I coordination sequenced around ETA/ETD.",
+            },
+            {
+              t: "Crew Change & Spares",
+              d: "Joiners and leavers handled with immigration and logistics, plus clearing and onboard delivery of ship spares.",
+            },
+            {
+              t: "Protective Attendance",
+              d: "Owner-focused representation that keeps turnaround secure, efficient, and independently reported.",
+            },
+            {
+              t: "Oil & Gas Upstream",
+              d: "Ground support for OSVs, tankers, and campaign traffic through Takoradi and Tema, with Lome as the regional transit option.",
             },
           ].map((s) => (
             <div key={s.t} className="brochure-service">
@@ -157,7 +197,7 @@ export default function BrochurePage() {
         </div>
         <p className="brochure-footer-note">
           © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
-          Marine supply · Offshore support · West African port coverage.
+          Ship agency · Husbandry · Oil & gas upstream · Tema · Takoradi · Lome.
         </p>
       </section>
 

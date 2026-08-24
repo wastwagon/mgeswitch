@@ -1,46 +1,41 @@
 # MGE-SWITCH
 
-Ship agency & allied services website — design system and stack forked from a prior Next.js marketing platform, rebranded for **MGE-SWITCH**.
+Ship agency and allied services website for **Tema & Takoradi (Ghana)** and **Lome (Togo)**.
 
-**Coverage:** Tema & Takoradi (Ghana), Lome (Togo)  
-**Focus:** Ship agency & husbandry, ship spares, crew change, protective agency
+**Focus:** ship agency & husbandry, ship spares, crew change, protective agency
 
 ## Stack
 
 - Next.js (App Router) + TypeScript + Tailwind
 - Prisma + PostgreSQL + Redis
-- NextAuth admin, enquiry flows, Coolify-ready Docker Compose
+- NextAuth admin and enquiry flows
 
-## Local start (quick)
+## Local start
+
+Homebrew Postgres on `:5432` and Redis on `:6379` are the default (this avoids a port clash with other Docker stacks).
 
 ```bash
 cd /Users/OceanCyber/Downloads/mge-switch
-cp .env.example .env
+bash scripts/start-local.sh
+```
+
+The script creates the `mgeswitch` Postgres role/database if needed, migrates, seeds, and starts the app at **http://localhost:3080**.
+
+Admin login: `admin@mge-switch.com` / `admin123`
+
+Manual equivalent:
+
+```bash
+cp .env.example .env   # if you do not already have .env
 npm install --legacy-peer-deps
-# Point DATABASE_URL / REDIS_URL at local Postgres + Redis, then:
 npx prisma generate
-npx prisma migrate deploy   # or migrate dev
+npx prisma migrate deploy
 npm run db:seed
 npm run dev
 ```
 
-Open http://localhost:3080
+Phone and WhatsApp values are placeholders (`+233 000 000 000`) until real contacts are provided.
 
-## What was prepared
+## Optional Docker databases
 
-- New folder separate from MGE-SWITCH (`/Users/OceanCyber/Downloads/mge-switch`)
-- Core brand copy, nav, hero, about, services, trust, metadata updated for MGE-SWITCH
-- Env / Coolify templates reset to placeholder domain & contacts
-
-## Still yours to finish in a new chat
-
-- Real phone, WhatsApp, email, legal address, domain
-- Replace leftover MGE-SWITCH image filenames / gallery media / blog posts
-- Admin seed credentials & production Coolify deploy
-- Visual identity (logo/icons still use inherited SVG assets)
-
-## Sibling project
-
-The original MGE-SWITCH project remains intact at:
-
-`/Users/OceanCyber/Downloads/mgeswitch`
+`docker-compose.dev.yml` can run Postgres/Redis on host ports **5438 / 6391**. Those ports are already used by another local stack on this machine, so the Homebrew path above is preferred.

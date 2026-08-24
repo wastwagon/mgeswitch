@@ -107,4 +107,29 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       "All vessel types",
     ],
   },
+  {
+    id: "oil-gas-upstream",
+    title: "Oil & Gas Upstream Support",
+    eyebrow: "Energy corridor attendance",
+    summary:
+      "Ground support for offshore campaigns, OSVs, tankers, and project vessels calling Ghana’s energy ports, with Lome as the regional transit option.",
+    description:
+      "Alongside conventional ship agency, MGE-SWITCH supports oil and gas upstream traffic through Takoradi and Tema. We coordinate arrivals, husbandry, crew rotations, stores, and port operations for campaign-related vessels, with allied coverage at Lome — West Africa’s key transit hub.",
+    image: "/images/services/protective-agency.png",
+    imageAlt: "Oil and gas upstream port support and vessel attendance",
+    products: [
+      "OSV and tanker agency attendance",
+      "Offshore crew change and travel",
+      "Campaign stores and spares coordination",
+      "Port operations for energy-related calls",
+      "Takoradi and Tema ground desks",
+      "Lome transit-hub coverage",
+    ],
+    vessels: [
+      "Offshore support vessels",
+      "Tankers",
+      "Project and campaign vessels",
+      "Owners and energy operators",
+    ],
+  },
 ];

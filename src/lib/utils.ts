@@ -38,6 +38,6 @@ export function buildWhatsAppUrl(message: string, number?: string) {
   const n =
     number ??
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ??
-    "233555207204";
+    "233000000000";
   return `https://wa.me/${n}?text=${encodeURIComponent(message)}`;
 }

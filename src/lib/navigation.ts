@@ -27,7 +27,7 @@ export const homeExploreLinks = [
     eyebrow: "Services",
     title: "Agency & husbandry lines",
     description:
-      "Ship agency, crew change, ship spares, protective agency, and port coordination organised into clear service lines.",
+      "Ship agency, crew change, ship spares, protective agency, oil and gas upstream support, and port coordination organised into clear service lines.",
   },
   {
     href: "/corporate",
@@ -48,7 +48,7 @@ export const homeExploreLinks = [
     eyebrow: "Ports",
     title: "Where we serve",
     description:
-      "Registered Ghanaian coverage in Tema and Takoradi, with allied support in Lome, Togo.",
+      "Registered Ghanaian coverage in Tema and Takoradi — Ghana’s two principal ports — with allied support at Lome, West Africa’s key transit hub.",
   },
   {
     href: "/about",
@@ -62,6 +62,6 @@ export const homeExploreLinks = [
     eyebrow: "Insights",
     title: "Maritime articles and updates",
     description:
-      "Editorial content on port agency, crew logistics, and vessel turnaround best practice.",
+      "Editorial content on full port calls, crew logistics, oil and gas upstream support, and the Ghana–Lome corridor.",
   },
 ] as const;

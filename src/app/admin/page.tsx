@@ -198,7 +198,7 @@ export default async function AdminPage() {
               <Briefcase className="mx-auto h-12 w-12 text-light-blue" />
               <p className="mt-4 font-medium text-navy">No corporate enquiries yet</p>
               <p className="mt-1 text-sm text-muted">
-                Submissions from the corporate page will appear here
+                Submissions from the public enquiry form will appear here
               </p>
             </div>
           )}

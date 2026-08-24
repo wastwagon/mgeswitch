@@ -14,17 +14,17 @@ export function FeatureBento({ showHeader = true }: { showHeader?: boolean }) {
         {showHeader && (
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-              What We Supply
+              What We Handle
             </p>
             <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-              Marine, offshore, and vessel support
+              Ship agency, husbandry, and oil & gas upstream
               <br />
-              <span className="text-light-blue">across West African ports</span>
+              <span className="text-light-blue">Tema, Takoradi, and Lome</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted">
-              Technical stores, provisions, lubricants, safety materials,
-              publications, and crew essentials delivered with a premium
-              standard of sourcing and coordination.
+              Every aspect of the port call — arrivals, operations, crew, spares,
+              protective attendance, and energy-related support — coordinated on
+              the ground.
             </p>
           </div>
         )}

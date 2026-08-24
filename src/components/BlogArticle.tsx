@@ -145,8 +145,8 @@ export function BlogArticle({ post, relatedPosts }: BlogArticleProps) {
                       Ready to discuss your next requirement?
                     </h2>
                     <p className="mt-3 text-sm leading-relaxed text-muted">
-                      Technical stores, provisions, welfare items, publications,
-                      and responsive port-side coordination
+                      Ship agency, crew change, spares delivery, protective
+                      attendance, and responsive port-side coordination
                     </p>
                     <Link
                       href="/corporate"
@@ -167,11 +167,11 @@ export function BlogArticle({ post, relatedPosts }: BlogArticleProps) {
                     MGE-SWITCH
                   </p>
                   <h3 className="font-display mt-3 text-xl font-bold">
-                    Premium marine support
+                    Premium ship agency support
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/75">
-                    Responsive vessel support across technical, welfare, and
-                    regional port-supply requirements.
+                    Responsive port attendance across agency, crew change, spares,
+                    and protective requirements.
                   </p>
                   <Link
                     href="/corporate"

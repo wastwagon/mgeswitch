@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3080";
 
     const html = `
-      <h2>New Marine Supply Enquiry — ${reference}</h2>
+      <h2>New Ship Agency Enquiry — ${reference}</h2>
       <p><strong>Company:</strong> ${data.company}</p>
       <p><strong>Contact:</strong> ${data.contactName}</p>
       <p><strong>Email:</strong> ${data.email}</p>
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
     try {
       await sendEmail({
         to: getAdminEmail(),
-        subject: `Marine Supply Enquiry — ${data.company} (${reference})`,
+        subject: `Ship Agency Enquiry — ${data.company} (${reference})`,
         html,
       });
 
@@ -78,13 +78,13 @@ export async function POST(request: NextRequest) {
         subject: `Enquiry Received | ${brand.name}`,
         html: `
           <p>Dear ${data.contactName},</p>
-          <p>Thank you for contacting ${brand.name}. Our team will review your vessel supply requirements and respond as quickly as possible.</p>
+          <p>Thank you for contacting ${brand.name}. Our team will review your ship agency requirements and respond as quickly as possible.</p>
           <p>Your reference: <strong>${reference}</strong></p>
           <p>Kind regards,<br/>The ${brand.name} Operations Team</p>
         `,
       });
     } catch (emailError) {
-      console.error("Marine supply enquiry email failed:", emailError);
+      console.error("Ship agency enquiry email failed:", emailError);
     }
 
     return NextResponse.json({ success: true, reference: enquiry.reference });
@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: "Validation failed" }, { status: 400 });
     }
-    console.error("Marine supply enquiry error:", error);
+    console.error("Ship agency enquiry error:", error);
     return NextResponse.json({ error: "Failed to submit enquiry" }, { status: 500 });
   }
 }

@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = createMetadata({
   title: "Blog & Insights",
   description:
-    "Maritime articles on vessel supply, crew welfare, technical stores, and offshore support across West Africa.",
+    "Maritime articles on ship agency, crew change, protective attendance, and port-call planning across West Africa.",
   openGraph: {
     title: "Blog | MGE-SWITCH",
     description:
@@ -32,7 +32,7 @@ export default async function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="Operational insight for ship agency professionals"
-        description="Editorial content that supports procurement, crew welfare, technical planning, and premium vessel-support execution."
+        description="Editorial content on agency attendance, crew logistics, spares delivery, and premium port-call execution."
         image={IMAGES.hero}
         imageAlt="MGE-SWITCH maritime insights"
         minHeight="min-h-[42vh]"
@@ -50,8 +50,8 @@ export default async function BlogPage() {
               </h2>
             </div>
             <p className="max-w-md text-sm text-muted">
-              {posts.length} published pieces covering procurement readiness,
-              supply quality, navigation support, and vessel turnaround.
+              {posts.length} published pieces covering agency attendance,
+              crew change, protective cover, and vessel turnaround.
             </p>
           </div>
 

@@ -76,7 +76,7 @@ check_api POST "/api/pricing" "$PRICING" 200
 check_api GET "/api/bookings" "" 401
 
 FUTURE=$(date -u -v+7d +"%Y-%m-%dT10:00:00.000Z" 2>/dev/null || date -u -d "+7 days" +"%Y-%m-%dT10:00:00.000Z")
-BOOKING="{\"type\":\"PICKUP\",\"vehicleId\":\"executive-sedan\",\"pickupLocation\":\"Tema Port, Ghana\",\"dropoffLocation\":\"Takoradi Port, Ghana\",\"pickupDate\":\"$FUTURE\",\"flightNumber\":\"VOYAGE-001\",\"passengerCount\":2,\"luggageCount\":1,\"customerName\":\"Test User\",\"customerEmail\":\"test@example.com\",\"customerPhone\":\"0555207204\",\"paymentMethod\":\"WHATSAPP\"}"
+BOOKING="{\"type\":\"PICKUP\",\"vehicleId\":\"executive-sedan\",\"pickupLocation\":\"Tema Port, Ghana\",\"dropoffLocation\":\"Takoradi Port, Ghana\",\"pickupDate\":\"$FUTURE\",\"flightNumber\":\"VOYAGE-001\",\"passengerCount\":2,\"luggageCount\":1,\"customerName\":\"Test User\",\"customerEmail\":\"test@example.com\",\"customerPhone\":\"0550000000\",\"paymentMethod\":\"WHATSAPP\"}"
 BOOKING_RESP=$(curl -s -X POST -H "Content-Type: application/json" -d "$BOOKING" "$BASE/api/bookings")
 BOOKING_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Content-Type: application/json" -d "$BOOKING" "$BASE/api/bookings")
 if [ "$BOOKING_CODE" = "201" ]; then

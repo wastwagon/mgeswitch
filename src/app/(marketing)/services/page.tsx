@@ -11,7 +11,7 @@ import { SERVICE_DETAILS } from "@/lib/services";
 export const metadata: Metadata = createMetadata({
   title: "Ship Agency Services",
   description:
-    "Explore MGE-SWITCH ship agency and husbandry, ship spares, crew change, and protective agency services across Tema, Takoradi, and Lome.",
+    "Explore MGE-SWITCH ship agency, husbandry, crew change, protective agency, and oil and gas upstream support across Tema, Takoradi, and Lome.",
   openGraph: {
     title: "Ship Agency Services | MGE-SWITCH",
     description:
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Agency and husbandry lines built around real port calls"
-        description="Each service line is structured to ease administrative and logistics burden — from documentation and crew change to spares delivery and protective attendance."
+        description="Each service line is structured to ease administrative and logistics burden — from documentation, crew change, and spares to protective attendance and oil and gas upstream support."
         image={IMAGES.hero}
         imageAlt="MGE-SWITCH ship agency services"
       />

@@ -10,7 +10,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({
-  message = "Hello MGE-SWITCH, I would like to discuss a marine supply requirement.",
+  message = "Hello MGE-SWITCH, I would like to discuss ship agency support for a port call.",
   className = "",
   label = "Chat on WhatsApp",
 }: WhatsAppButtonProps) {

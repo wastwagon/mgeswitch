@@ -10,7 +10,7 @@ export function CorporateTeaser() {
         <div className="relative min-h-[320px] lg:min-h-[480px]">
           <Image
             src={IMAGES.fleet.van}
-            alt="Nautical publications and marine supply planning"
+            alt="Ship agency operations planning at a commercial port"
             fill
             className="object-cover opacity-80"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -18,15 +18,15 @@ export function CorporateTeaser() {
         </div>
         <div className="flex flex-col justify-center px-6 py-16 sm:px-12 lg:px-16">
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-            Operations & Procurement
+            Appoint An Agent
           </p>
           <h2 className="font-display mt-4 text-3xl font-bold text-white sm:text-4xl">
-            A premium enquiry flow for urgent and planned supply requirements
+            A premium enquiry flow for the next port call
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-white/75 sm:text-base">
-            Submit vessel, offshore, or port support requirements with the detail
-            serious maritime operations demand. Our team reviews supply scope,
-            timing, and specification before responding.
+            Submit vessel particulars, ETA/ETD, port, and required agency or
+            husbandry support. Our team reviews the call window and responds with
+            a practical attendance plan.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link

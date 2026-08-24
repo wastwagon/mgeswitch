@@ -1,6 +1,7 @@
 export const BRAND = {
   name: "MGE-SWITCH",
-  tagline: "Ship Agency & Allied Services",
+  tagline: "Ship Agency, Husbandry & Oil & Gas Upstream",
+  shortTagline: "Agency · Husbandry · Oil & Gas",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "+233 000 000 000",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233000000000",
   address:
@@ -29,8 +30,8 @@ export const DESTINATION_GROUPS = [
     id: "ghana",
     label: "Ghana",
     destinations: [
-      "Tema Port — ship agency & husbandry",
-      "Takoradi Port — vessel operations support",
+      "Tema Port — Ghana’s eastern commercial gateway",
+      "Takoradi Port — western energy and project hub",
       "Crew change, embarkation & disembarkation",
       "Ship spares clearing and onboard delivery",
     ],
@@ -39,7 +40,7 @@ export const DESTINATION_GROUPS = [
     id: "togo",
     label: "Togo",
     destinations: [
-      "Lome Port — ship agency coverage",
+      "Lome Port — West Africa’s key transit hub",
       "Protective agency attendance",
       "Port documentation and turnaround support",
     ],
@@ -96,8 +97,15 @@ export const SERVICE_FEATURES = [
     id: "port-ops",
     title: "Port Operations Coordination",
     description:
-      "Local representation that eases administrative and logistics burden across Tema, Takoradi, and Lome.",
+      "Local representation that eases administrative and logistics burden across Tema, Takoradi, and Lome — from arrival through departure.",
     accent: "light",
+  },
+  {
+    id: "oil-gas",
+    title: "Oil & Gas Upstream Support",
+    description:
+      "Ground support for offshore campaigns calling Ghana’s energy corridor — OSVs, tankers, and project traffic through Takoradi and Tema, with Lome as the regional transit option.",
+    accent: "navy",
   },
 ] as const;
 
@@ -132,7 +140,7 @@ export const FAQ_ITEMS = [
   {
     question: "Where does MGE-SWITCH operate?",
     answer:
-      "We operate as a Ghanaian ship agency and allied services provider in Tema and Takoradi Ports in Ghana, and in Lome, Togo.",
+      "We are a Ghanaian-registered ship agency, husbandry, and oil and gas upstream services provider. Ground operations cover Tema and Takoradi — Ghana’s two principal ports — with allied coverage at Lome, West Africa’s key transit hub.",
   },
   {
     question: "What types of vessels do you represent?",
@@ -159,6 +167,16 @@ export const FAQ_ITEMS = [
     answer:
       "Use the enquiry page or contact operations with vessel particulars, port, ETA/ETD, and required services. We will respond promptly.",
   },
+  {
+    question: "Do you handle the full port call, or only documentation?",
+    answer:
+      "We handle every aspect of the port call: arrivals, port operations, husbandry, crew, spares, surveys, and departure formalities — so owners and operators keep one accountable local desk.",
+  },
+  {
+    question: "Do you support oil and gas upstream traffic?",
+    answer:
+      "Yes. Alongside conventional ship agency, we provide oil and gas upstream port support, particularly through Takoradi and Tema, including OSVs, tankers, and campaign-related husbandry.",
+  },
 ] as const;
 
 export const PAYMENT_METHODS = [
@@ -171,6 +189,6 @@ export const HERO_COPY = {
   eyebrow: "Tema · Takoradi · Lome",
   headline: "Navigating ports with precision and care",
   subheadline:
-    "MGE-SWITCH ensures effective management of your vessels' operations — fostering a smooth, streamlined experience throughout every port call.",
+    "A Ghanaian-registered ship agency and husbandry partner, with oil and gas upstream support on the ground in Tema and Takoradi, and allied coverage at Lome — West Africa’s key transit hub. We handle every aspect of the port call: arrivals, operations, and departure.",
   cta: "Send An Enquiry",
 } as const;

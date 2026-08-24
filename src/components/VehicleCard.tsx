@@ -63,7 +63,7 @@ export function VehicleCard({ vehicle, selected, onSelect }: VehicleCardProps) {
         <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
           <span className="flex items-center gap-1.5 text-xs text-muted">
             <Users className="h-3.5 w-3.5 text-gold" />
-            Up to {vehicle.capacity} guests
+            Up to {vehicle.capacity} pax
           </span>
           <span className="font-display text-sm font-bold text-gold">
             from {formatCurrency(Number(vehicle.basePrice))}

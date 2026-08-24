@@ -23,8 +23,8 @@ export async function BlogTeaser() {
               Latest from our blog
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted">
-              Articles on marine supply readiness, port support planning, crew
-              welfare sourcing, and practical offshore logistics.
+              Articles on port agency, crew change, protective attendance, and
+              practical West African turnaround planning.
             </p>
           </div>
           <Link

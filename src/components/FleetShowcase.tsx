@@ -16,7 +16,7 @@ export async function FleetShowcase({ showHeader = true }: { showHeader?: boolea
           <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-                Supply Categories
+                Service Lines
               </p>
               <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl lg:text-5xl">
                 Browse key operational lines
@@ -64,7 +64,7 @@ export async function FleetShowcase({ showHeader = true }: { showHeader?: boolea
                   )}
                   <div className="mt-6 flex items-end justify-between border-t border-border pt-6">
                     <p className="text-xs text-muted">
-                      Up to {vehicle.capacity} guests · A/C · Chauffeur included
+                      Port attendance · Tema · Takoradi · Lome
                     </p>
                     <div className="text-right">
                       <p className="text-[10px] uppercase tracking-widest text-muted">

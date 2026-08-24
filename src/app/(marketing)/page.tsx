@@ -6,6 +6,7 @@ import { HomeExplore } from "@/components/HomeExplore";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { BlogTeaser } from "@/components/BlogTeaser";
 import { CorporateTeaser } from "@/components/CorporateTeaser";
+import { PortCallScope } from "@/components/PortCallScope";
 import { CTABanner } from "@/components/CTABanner";
 import { createMetadata } from "@/lib/metadata";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStatsBar />
+      <PortCallScope />
       <CredibilitySection />
       <HomeExplore />
       <TestimonialsSection />

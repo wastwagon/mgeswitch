@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { PortCallScope } from "@/components/PortCallScope";
 import { CTABanner } from "@/components/CTABanner";
 import { createMetadata } from "@/lib/metadata";
 import { IMAGES } from "@/lib/images";
@@ -9,7 +10,7 @@ import { IMAGES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "How We Work",
   description:
-    "How MGE-SWITCH receives, sources, coordinates, and delivers ship agency requirements.",
+    "How MGE-SWITCH receives an appointment, aligns formalities, and attends every aspect of the port call — arrivals through departure.",
   openGraph: {
     title: "How We Work | MGE-SWITCH",
     description: "Four simple steps to responsive ship agency execution.",
@@ -23,12 +24,13 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="How We Work"
         title="Four steps to coordinated vessel support"
-        description="From receiving your requirement to final delivery planning, our process is built around speed, clarity, and dependable execution."
+        description="From first notice of arrival to sailing, our process is built around speed, clarity, and dependable attendance of the full port call."
         image={IMAGES.hero}
         imageAlt="How MGE-SWITCH works"
         minHeight="min-h-[42vh]"
       />
       <ProcessTimeline showHeader={false} />
+      <PortCallScope />
       <section className="border-t border-border bg-light-blue-bg/30 py-12 text-center">
         <Link
           href="/corporate"

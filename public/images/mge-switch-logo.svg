@@ -1,8 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
-  <rect width="64" height="64" rx="12" fill="#0B1F3A"/>
-  <path d="M12 40 L32 18 L52 40" stroke="#C9A227" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M20 40 H44" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="32" cy="44" r="3" fill="#C9A227"/>
-  <text x="80" y="28" fill="#0B1F3A" font-family="Georgia, serif" font-size="22" font-weight="700">MGE-SWITCH</text>
-  <text x="80" y="48" fill="#6B7280" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.5">SHIP AGENCY</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#0E3D3A"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#E07A2F" stroke-width="1.7"/>
+  <circle cx="32" cy="6.4" r="1.8" fill="#E07A2F"/>
+  <circle cx="54.1" cy="44.3" r="1.8" fill="#E07A2F"/>
+  <circle cx="9.9" cy="44.3" r="1.8" fill="#E07A2F"/>
+  <path d="M23.3 20.7 C23.3 15.7 40.7 15.7 40.7 22.9 C40.7 29.9 23.3 30.1 23.3 37.9 C23.3 45.6 40.7 45.6 40.7 40.5" fill="none" stroke="#F3EFE6" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="4.1" fill="#E07A2F"/>
+  <circle cx="32" cy="32" r="1.5" fill="#F3EFE6"/>
+  <text x="78" y="30" fill="#0E3D3A" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700">MGE</text>
+  <text x="148" y="29" fill="#E07A2F" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="3.4">SWITCH</text>
+  <text x="78" y="50" fill="#5C6B67" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" letter-spacing="1.8">AGENCY · HUSBANDRY · OIL &amp; GAS</text>
 </svg>

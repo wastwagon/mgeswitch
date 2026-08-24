@@ -4,6 +4,7 @@ export const CORPORATE_SERVICE_TYPES = [
   "technical",
   "provisions",
   "regional-support",
+  "oil-gas",
   "other",
 ] as const;
 
@@ -28,9 +29,10 @@ export const corporateEnquiryUpdateSchema = z
   });
 
 export const SERVICE_TYPE_LABELS: Record<string, string> = {
-  technical: "Technical & Engine Stores",
-  provisions: "Provisions / Welfare Stores",
-  "regional-support": "Regional Port Support",
+  technical: "Ship Agency & Husbandry",
+  provisions: "Crew Change & Travel",
+  "regional-support": "Protective Agency / Spares",
+  "oil-gas": "Oil & Gas Upstream Support",
   other: "Other",
 };
 

@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "MGE-SWITCH — Ship Agency & Allied Services",
+    name: "MGE-SWITCH — Ship Agency, Husbandry & Oil & Gas",
     short_name: "MGE-SWITCH",
     description:
-      "Premium marine and offshore supply support from Tema across key West African ports.",
+      "Ghanaian-registered ship agency, husbandry, and oil and gas upstream support in Tema, Takoradi, and Lome.",
     start_url: "/",
     display: "standalone",
     background_color: "#1B365D",

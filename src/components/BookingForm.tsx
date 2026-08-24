@@ -485,7 +485,7 @@ export function BookingForm() {
                 </Field>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label="Mobile number" icon={Phone} error={errors.customerPhone?.message}>
-                    <input {...register("customerPhone")} placeholder="0555207204" autoComplete="tel" inputMode="tel" className={inputPremium} />
+                    <input {...register("customerPhone")} placeholder="0550000000" autoComplete="tel" inputMode="tel" className={inputPremium} />
                   </Field>
                   <Field label="Email address" icon={Mail} error={errors.customerEmail?.message}>
                     <input type="email" {...register("customerEmail")} autoComplete="email" inputMode="email" className={inputPremium} />
@@ -514,7 +514,7 @@ export function BookingForm() {
                 {[
                   { value: "CARD" as const, label: "Pay Online", sub: "Visa · Mastercard · Mobile Money", icon: CreditCard },
                   { value: "WHATSAPP" as const, label: "WhatsApp", sub: "Reserve now, confirm & pay via chat", icon: MessageCircle },
-                  { value: "CASH" as const, label: "Cash to Chauffeur", sub: "Pay your driver on arrival", icon: Banknote },
+                  { value: "CASH" as const, label: "Pay on Attendance", sub: "Settle locally after port attendance", icon: Banknote },
                 ].map((method) => (
                   <label
                     key={method.value}

@@ -43,7 +43,7 @@ export function Hero() {
         <div className="relative order-1 min-h-[46vh] lg:order-2 lg:col-span-7 lg:min-h-[82vh]">
           <Image
             src={IMAGES.hero}
-            alt="Marine supply cargo prepared for vessel support operations"
+            alt="Commercial vessel alongside for ship agency attendance"
             fill
             priority
             className="object-cover object-center"

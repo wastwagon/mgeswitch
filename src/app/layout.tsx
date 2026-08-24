@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
             url: brand.ogImage,
             width: 1200,
             height: 630,
-            alt: `${brand.name} — Premium marine and offshore supply solutions`,
+            alt: `${brand.name} — Ship agency and allied services`,
           },
         ],
       },

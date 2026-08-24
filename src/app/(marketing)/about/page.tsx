@@ -11,12 +11,12 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = createMetadata({
   title: "About Us",
   description:
-    "Learn about MGE-SWITCH, a Ghanaian ship agency and allied services company serving Tema, Takoradi, and major West African ports.",
+    "Learn about MGE-SWITCH, a Ghanaian-registered ship agency, husbandry, and oil and gas upstream partner covering Tema, Takoradi, and Lome.",
   openGraph: {
     title: "About MGE-SWITCH | Ship Agency & Allied Services",
     description:
       "A premium Ghanaian ship agency partner built around responsiveness, quality, and vessel support.",
-    images: [{ url: IMAGES.meetGreet, width: 1200, height: 630, alt: "MGE-SWITCH marine support" }],
+    images: [{ url: IMAGES.meetGreet, width: 1200, height: 630, alt: "MGE-SWITCH ship agency support" }],
   },
 });
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={IMAGES.hero}
-                alt="Marine supply cargo prepared for delivery"
+                alt="Ship agency attendance at a commercial port"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -161,9 +161,9 @@ export default function AboutPage() {
                 Built on trust and operational rigour
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-white/75">
-                Every supply request is approached with the discipline clients
-                expect from a serious maritime partner: careful sourcing,
-                dependable communication, and focus on vessel readiness.
+                Every appointment is approached with the discipline clients
+                expect from a serious maritime partner: careful coordination,
+                dependable communication, and focus on vessel turnaround.
               </p>
             </div>
             <CredibilityBadges variant="dark" />
@@ -174,7 +174,7 @@ export default function AboutPage() {
         <section className="bg-navy py-16 text-center sm:py-20">
           <div className="mx-auto max-w-2xl px-4">
             <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-              Ready to work with a responsive supply partner?
+              Ready to appoint a responsive agency partner?
             </h2>
             <p className="mt-4 text-sm text-white/70">
               Share your vessel requirements and let our team coordinate a

@@ -71,18 +71,18 @@ var PrismaClient = getPrismaClientClass();
 var BLOG_IMAGES = {
   "how-fast-vessel-supply-support-protects-turnaround": {
     image: "/gallery/mgeswitch-ship-provisions-container-01.jpeg",
-    imageAlt: "MGE-SWITCH marine supply cargo staged inside a shipping container"
+    imageAlt: "MGE-SWITCH ship agency operations at a commercial port"
   },
   "what-good-marine-provisioning-looks-like-in-west-africa": {
     image: "/gallery/mgeswitch-marine-cabin-stores-02.jpeg",
     imageAlt: "Marine provisions and cabin stores prepared for vessel delivery"
   },
   "nautical-publications-and-why-bridge-teams-cannot-compromise": {
-    image: "/images/mgeswitch-nautical.svg",
+    image: "/images/services/protective-agency.png",
     imageAlt: "Nautical publications and navigation planning materials"
   },
   "choosing-lubricants-and-consumables-for-harsh-marine-environments": {
-    image: "/images/mgeswitch-lubricants.svg",
+    image: "/images/services/ship-agency.png",
     imageAlt: "Marine lubricants and consumables for harsh operating conditions"
   }
 };
@@ -253,7 +253,7 @@ async function main() {
       name: "Admin",
       passwordHash: adminPassword,
       role: "ADMIN",
-      phone: "+233 596 092 689"
+      phone: "+233 000 000 000"
     }
   });
   console.log("Admin user:", admin.email);
@@ -262,7 +262,7 @@ async function main() {
       id: "executive-sedan",
       name: "Technical Stores",
       description: "Engine-room consumables, tools, and vessel-ready technical products sourced with specification in mind.",
-      imageUrl: "/images/mgeswitch-lubricants.svg",
+      imageUrl: "/images/services/ship-agency.png",
       capacity: 3,
       basePrice: 150,
       pricePerKm: 8,
@@ -272,7 +272,7 @@ async function main() {
       id: "premium-suv",
       name: "Safety & Welfare",
       description: "Safety equipment, crew welfare items, and day-to-day support products for comfortable, compliant operations.",
-      imageUrl: "/images/mgeswitch-safety.svg",
+      imageUrl: "/images/services/crew-change.png",
       capacity: 5,
       basePrice: 220,
       pricePerKm: 10,
@@ -282,7 +282,7 @@ async function main() {
       id: "luxury-van",
       name: "Navigation & Publications",
       description: "Nautical publications, charts, and specialty navigation support for bridge teams and vessel operators.",
-      imageUrl: "/images/mgeswitch-nautical.svg",
+      imageUrl: "/images/services/protective-agency.png",
       capacity: 10,
       basePrice: 350,
       pricePerKm: 12,
@@ -301,10 +301,10 @@ async function main() {
     {
       slug: "about",
       title: "About MGE-SWITCH",
-      excerpt: "A Ghanaian marine and offshore supply partner with West African reach.",
-      content: "<h2>Our mission</h2><p>MGE-SWITCH delivers premium marine and offshore support through dependable sourcing, responsive coordination, and vessel-focused service across West African ports.</p><h2>Headquarters</h2><p>We are headquartered at the Heavy Industrial Area Enclave, Tema, Ghana.</p>",
+      excerpt: "A Ghanaian ship agency and allied services partner covering Tema, Takoradi, and Lome.",
+      content: "<h2>Our mission</h2><p>MGE-SWITCH provides ship agency, husbandry, crew change, spares delivery, and protective attendance across Tema, Takoradi, and Lome.</p><h2>Headquarters</h2><p>We operate in Tema and Takoradi Ports of Ghana and in Lome, Togo.</p>",
       metaTitle: "About MGE-SWITCH",
-      metaDescription: "Learn about MGE-SWITCH and our marine supply support network across West Africa."
+      metaDescription: "Learn about MGE-SWITCH and our ship agency coverage across Tema, Takoradi, and Lome."
     },
     {
       slug: "privacy-policy",
@@ -312,7 +312,7 @@ async function main() {
       excerpt: "How MGE-SWITCH collects, uses, and protects your personal data.",
       content: "<h2>Information we collect</h2><p>When you submit an enquiry or contact our team, we collect your name, email, phone number, company details, and request information necessary to respond effectively.</p><h2>How we use your data</h2><ul><li>To review and respond to enquiries</li><li>To coordinate service delivery and support</li><li>To improve our operational communication</li></ul><h2>Data retention</h2><p>Enquiry records are retained for operational and legal purposes. You may request deletion of non-essential data by contacting us.</p>",
       metaTitle: "Privacy Policy | MGE-SWITCH",
-      metaDescription: "Privacy policy for MGE-SWITCH marine supply enquiries."
+      metaDescription: "Privacy policy for MGE-SWITCH ship agency enquiries."
     },
     {
       slug: "terms-of-service",
@@ -320,7 +320,7 @@ async function main() {
       excerpt: "Terms and conditions for MGE-SWITCH enquiries and service delivery.",
       content: "<h2>Enquiries and Supply</h2><p>All service requests are subject to product availability, vessel timing, and confirmed delivery details. Quotations and commitments are based on the final agreed scope.</p><h2>Changes</h2><p>Amendments to timing, specification, or quantities may affect availability and pricing. We encourage clients to communicate updates promptly.</p><h2>Safety and Compliance</h2><p>We reserve the right to decline requests that conflict with operational safety, compliance requirements, or lawful trade practice.</p>",
       metaTitle: "Terms of Service | MGE-SWITCH",
-      metaDescription: "Terms and conditions for MGE-SWITCH marine supply services."
+      metaDescription: "Terms and conditions for MGE-SWITCH ship agency services."
     }
   ];
   for (const page of cmsPages) {
@@ -354,12 +354,12 @@ async function main() {
   for (const [key, value] of Object.entries({
     site_name: "MGE-SWITCH",
     site_tagline: "Premium Marine & Offshore Supply Solutions",
-    contact_phone: "+233 596 092 689",
-    contact_whatsapp: "233596092689",
+    contact_phone: "+233 000 000 000",
+    contact_whatsapp: "233000000000",
     contact_email: "ops@mge-switch.com",
-    contact_address: "Heavy Industrial Area Enclave, Tema, Ghana",
-    seo_default_description: "MGE-SWITCH is a Ghanaian marine and offshore supply firm supporting vessels with provisions, technical stores, lubricants, nautical publications, and responsive West African port coverage.",
-    seo_og_image: "/images/mgeswitch-og.svg",
+    contact_address: "Tema & Takoradi Ports, Ghana · Lome, Togo",
+    seo_default_description: "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
+    seo_og_image: "/images/mge-switch-og.svg",
     maintenance_mode: "false"
   })) {
     await prisma2.siteSetting.upsert({

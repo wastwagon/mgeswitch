@@ -8,7 +8,7 @@ import { IMAGES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "Gallery",
   description:
-    "A visual look at MGE-SWITCH ship agency, husbandry, crew change, and protective agency operations across Tema, Takoradi, and Lome.",
+    "A visual look at MGE-SWITCH ship agency, husbandry, oil and gas upstream, crew change, and protective agency operations across Tema, Takoradi, and Lome.",
   openGraph: {
     title: "Gallery | MGE-SWITCH",
     description:

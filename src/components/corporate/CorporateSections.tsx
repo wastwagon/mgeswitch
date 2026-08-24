@@ -121,9 +121,10 @@ export function CorporateEnquiryForm() {
           className="w-full border border-border px-4 py-3.5 text-sm outline-none focus:border-navy"
         >
           <option value="">Select a service</option>
-          <option value="technical">Technical & Engine Stores</option>
-          <option value="provisions">Provisions / Welfare Stores</option>
-          <option value="regional-support">Regional Port Support</option>
+          <option value="technical">Ship Agency & Husbandry</option>
+          <option value="provisions">Crew Change & Travel</option>
+          <option value="regional-support">Protective Agency / Spares</option>
+          <option value="oil-gas">Oil & Gas Upstream Support</option>
           <option value="other">Other</option>
         </select>
       </div>
@@ -135,7 +136,7 @@ export function CorporateEnquiryForm() {
           name="message"
           required
           rows={4}
-          placeholder="Share vessel name, port, ETA, required items, delivery window, and any special operational notes…"
+          placeholder="Share vessel name, port, ETA/ETD, and the agency or husbandry support you need…"
           className="w-full border border-border px-4 py-3.5 text-sm outline-none focus:border-navy"
         />
       </div>
