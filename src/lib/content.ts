@@ -1,113 +1,109 @@
 export const ABOUT_CONTENT = {
   hero: {
-    eyebrow: "About Ulfborg Rebooth",
-    headline: "A Ghanaian marine supply partner built around response and reliability",
+    eyebrow: "About MGE-SWITCH",
+    headline: "A Ghanaian ship agency built for precision and care",
     subheadline:
-      "Headquartered in Tema's heavy industrial enclave and supported by a growing West African port presence, Ulfborg Rebooth serves vessels with precision, urgency, and a premium operating standard.",
+      "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
   },
   story: {
     title: "Our Story",
     paragraphs: [
-      "Ulfborg Rebooth was shaped to meet a practical need in the maritime industry: dependable vessel support delivered with the discipline, product knowledge, and speed that complex port operations require.",
-      "From Tema and Takoradi to partner coverage in Lome, Cotonou, Apapa, and Monrovia, our work goes beyond conventional ship supply. We focus on responsiveness, accurate sourcing, safe handling, and coordinated delivery that protects vessel turnaround.",
-      "Today, we serve offshore operators, cargo vessels, tankers, support craft, project vessels, and camp-base operations with a customer-centric approach that has earned trust across the region.",
+      "Navigating ports with precision and care, MGE-SWITCH ensures effective management of your vessels' operations — fostering a smooth and streamlined experience throughout the process.",
+      "With our expertise and commitment to excellence, you can trust us to navigate complexities and ensure a seamless experience for shipowners, charterers, and operators of all vessel types.",
+      "We are positioned strategically as your local representatives to ease administrative and logistics burden across Tema, Takoradi, and Lome.",
     ],
   },
   values: [
     {
-      title: "Responsive Operations",
+      title: "Precision Port Navigation",
       description:
-        "We understand the urgency that surrounds vessel calls. Requests are handled with speed, clarity, and practical coordination from sourcing through final delivery.",
+        "We manage ETA/ETD, port stay, and formalities with care so vessel operations remain orderly and predictable.",
     },
     {
-      title: "Quality-Focused Selection",
+      title: "Local Representation",
       description:
-        "Every category we supply is selected with attention to current quality procedures, operational suitability, and crew safety standards.",
+        "As local representatives of owners, charterers, and operators, we ease administrative and logistics burden on the ground.",
     },
     {
-      title: "Customer-Centric Service",
+      title: "Husbandry Excellence",
       description:
-        "We prioritise client needs at every stage, from urgent replenishment and special sourcing to practical communication that keeps procurement teams informed.",
+        "From crew change and visas to spares delivery, surveys, and P&I coordination — husbandry needs are handled end to end.",
     },
     {
-      title: "Regional Reach",
+      title: "Protective Focus",
       description:
-        "Our operational footprint supports vessels in Ghana and across key West African ports, helping clients maintain continuity beyond a single harbour call.",
+        "Our protective agency services prioritise the security and efficiency of vessel operations and turnaround.",
     },
   ],
   stats: [
-    { value: "20+", label: "Years of Industry Exposure" },
-    { value: "6", label: "Port Locations Covered" },
-    { value: "24/7", label: "Responsive Support Mindset" },
+    { value: "3", label: "Ports Covered" },
+    { value: "24/7", label: "Operations Mindset" },
     { value: "100%", label: "Client-Focused Commitment" },
+    { value: "All", label: "Vessel Types Supported" },
   ],
   serviceArea: {
     title: "Operational Coverage",
-    description:
-      "Our marine and offshore support footprint includes:",
+    description: "Our ship agency footprint includes:",
     areas: [
-      "Tema Heavy Industrial Enclave, Ghana",
-      "Takoradi Branch Office, Ghana",
-      "Lome, Togo",
-      "Cotonou, Benin",
-      "Apapa, Nigeria",
-      "Monrovia, Liberia",
+      "Tema Port, Ghana",
+      "Takoradi Port, Ghana",
+      "Lome Port, Togo",
     ],
   },
 } as const;
 
 export const CORPORATE_CONTENT = {
   hero: {
-    eyebrow: "Enquiries & Procurement",
-    headline: "Operational support for vessels, offshore projects, and procurement teams",
+    eyebrow: "Enquiries & Appointments",
+    headline: "Appoint MGE-SWITCH for your next port call",
     subheadline:
-      "Submit your vessel requirements, offshore support needs, or port supply brief and our team will coordinate a practical response around timing, specification, and delivery.",
+      "Share vessel particulars, ETA/ETD, port, and required agency or husbandry services. Our team will coordinate a practical response.",
   },
   offerings: [
     {
-      title: "Technical & Engine Stores",
+      title: "Ship Agency & Husbandry",
       description:
-        "Consumables, tools, OEM-aligned spares, and technical support items sourced for dependable vessel readiness and smoother maintenance planning.",
+        "Port-stay management, documentation, visas, travel, accommodation, surveys, and P&I coordination.",
       features: [
-        "Engine-room consumables",
-        "Deck and workshop tools",
-        "Specification-led sourcing",
-        "Urgent replenishment support",
+        "ETA/ETD coordination",
+        "Legal documentation",
+        "Crew embarkation support",
+        "Husbandry logistics",
       ],
     },
     {
-      title: "Crew Welfare & Provisioning",
+      title: "Crew Change & Spares",
       description:
-        "Food stores, toiletries, linens, stationery, and cabin essentials supplied to help crews stay safe, comfortable, and fully supported throughout the voyage.",
+        "Crew rotations plus clearing and delivery of ship spares, including supply-boat arrangements.",
       features: [
-        "Imported and local provisions",
-        "Cabin and deck stores",
-        "Medical and safety items",
-        "Crew-use consumables",
+        "Visa and immigration support",
+        "Air ticketing and hotels",
+        "Spares clearing",
+        "Onboard delivery",
       ],
     },
     {
-      title: "Regional Port Supply Coordination",
+      title: "Protective Agency",
       description:
-        "Cross-port support for operators requiring a reliable supplier in Ghana and along West African routes, backed by clear communication and responsive delivery planning.",
+        "Owner-focused attendance that prioritises security and efficient vessel turnaround.",
       features: [
-        "Tema and Takoradi presence",
-        "Lome, Cotonou, Apapa, Monrovia coverage",
-        "Turnaround-focused logistics",
-        "Port-by-port enquiry handling",
+        "Protective representation",
+        "Turnaround monitoring",
+        "Independent reporting",
+        "Tema, Takoradi, and Lome",
       ],
     },
   ],
   brochure: {
     title: "Capabilities Brochure",
     description:
-      "Preview a printable capabilities summary covering our supply categories, regional presence, and service standards for vessel operators and procurement teams.",
+      "Preview a printable capabilities summary covering our agency lines, port coverage, and service standards.",
     cta: "Open Capability Sheet",
     preview: "Preview Capability Sheet",
   },
   contact: {
-    title: "Send a Marine Supply Enquiry",
+    title: "Send a Ship Agency Enquiry",
     description:
-      "Tell us your vessel name, port, ETA, and required items. We will review the brief and revert with a coordinated response as quickly as possible.",
+      "Tell us your vessel name, port, ETA/ETD, and required services. We will review and respond promptly.",
   },
 } as const;
