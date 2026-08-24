@@ -3,7 +3,7 @@ import { SERVICE_DETAILS } from "@/lib/services";
 
 export function ServiceCatalogue() {
   return (
-    <section className="bg-light-blue-bg/30 py-24 sm:py-32">
+    <section className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">

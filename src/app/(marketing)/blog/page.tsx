@@ -12,10 +12,10 @@ export const metadata: Metadata = createMetadata({
   description:
     "Maritime articles on vessel supply, crew welfare, technical stores, and offshore support across West Africa.",
   openGraph: {
-    title: "Blog | Ulfborg Rebooth",
+    title: "Blog | MGE-SWITCH",
     description:
-      "Practical insight into marine supply operations and vessel support.",
-    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "Ulfborg Rebooth blog" }],
+      "Practical insight into ship agency operations and vessel support.",
+    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "MGE-SWITCH blog" }],
   },
 });
 
@@ -31,10 +31,10 @@ export default async function BlogPage() {
     <>
       <PageHero
         eyebrow="Blog"
-        title="Operational insight for marine supply professionals"
+        title="Operational insight for ship agency professionals"
         description="Editorial content that supports procurement, crew welfare, technical planning, and premium vessel-support execution."
         image={IMAGES.hero}
-        imageAlt="Ulfborg Rebooth maritime insights"
+        imageAlt="MGE-SWITCH maritime insights"
         minHeight="min-h-[42vh]"
       />
 

@@ -58,7 +58,7 @@ export default async function CmsPage({
           <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/75 to-navy/30" />
           <div className="relative mx-auto w-full max-w-3xl px-4 pb-14 pt-28 sm:px-6 sm:pb-20">
             <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-              Ulfborg Rebooth
+              MGE-SWITCH
             </p>
             <h1 className="font-display mt-4 text-4xl font-bold text-white sm:text-5xl">
               {page.title}
@@ -74,7 +74,7 @@ export default async function CmsPage({
         <section className="gradient-navy py-20 sm:py-28">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-              Ulfborg Rebooth
+              MGE-SWITCH
             </p>
             <h1 className="font-display mt-4 text-4xl font-bold text-white sm:text-5xl">
               {page.title}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CredibilityBadges } from "@/components/CredibilityBadges";
+import { PageHero } from "@/components/PageHero";
 import { ABOUT_CONTENT } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
 import { IMAGES } from "@/lib/images";
@@ -10,12 +11,12 @@ import { BRAND } from "@/lib/constants";
 export const metadata: Metadata = createMetadata({
   title: "About Us",
   description:
-    "Learn about Ulfborg Rebooth, a Ghanaian marine and offshore supply company serving Tema, Takoradi, and major West African ports.",
+    "Learn about MGE-SWITCH, a Ghanaian ship agency and allied services company serving Tema, Takoradi, and major West African ports.",
   openGraph: {
-    title: "About Ulfborg Rebooth | Marine & Offshore Supply",
+    title: "About MGE-SWITCH | Ship Agency & Allied Services",
     description:
-      "A premium Ghanaian marine supply partner built around responsiveness, quality, and vessel support.",
-    images: [{ url: IMAGES.meetGreet, width: 1200, height: 630, alt: "Ulfborg Rebooth marine support" }],
+      "A premium Ghanaian ship agency partner built around responsiveness, quality, and vessel support.",
+    images: [{ url: IMAGES.meetGreet, width: 1200, height: 630, alt: "MGE-SWITCH marine support" }],
   },
 });
 
@@ -24,41 +25,30 @@ export default function AboutPage() {
 
   return (
     <>
-        {/* Hero */}
-        <section className="relative flex min-h-[60vh] items-end overflow-hidden">
-          <Image
-            src={IMAGES.meetGreet}
-            alt="Ulfborg Rebooth marine supply operations"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/30" />
-          <div className="relative mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pb-24">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-              {hero.eyebrow}
-            </p>
-            <h1 className="font-display mt-4 max-w-3xl text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              {hero.headline}
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-              {hero.subheadline}
-            </p>
-          </div>
-        </section>
+        <PageHero
+          eyebrow={hero.eyebrow}
+          title={hero.headline}
+          description={hero.subheadline}
+          image={IMAGES.meetGreet}
+          imageAlt="MGE-SWITCH ship agency operations"
+        />
 
         {/* Stats */}
         <section className="border-b border-border bg-white">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="px-6 py-10 text-center sm:py-12">
-                <p className="font-display text-3xl font-bold text-navy sm:text-4xl">
-                  {stat.value}
-                </p>
-                <p className="mt-2 text-[11px] uppercase tracking-widest text-muted">
-                  {stat.label}
-                </p>
+          <div className="mx-auto flex max-w-7xl flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0">
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="flex flex-1 items-baseline gap-4 px-6 py-8 sm:py-10">
+                <span className="font-display text-sm text-gold">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-display text-3xl font-bold text-navy sm:text-4xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-[11px] uppercase tracking-widest text-muted">
+                    {stat.label}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

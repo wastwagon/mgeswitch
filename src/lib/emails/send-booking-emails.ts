@@ -79,8 +79,8 @@ async function sendBookingEmails(
       sendEmail({
         to: data.customerEmail,
         subject: isPaid
-          ? `Confirmed — ${data.reference} | Ulfborg Rebooth`
-          : `Booking Received — ${data.reference} | Ulfborg Rebooth`,
+          ? `Confirmed — ${data.reference} | MGE-SWITCH`
+          : `Booking Received — ${data.reference} | MGE-SWITCH`,
         html: customerBookingConfirmationHtml(data, isPaid),
         text: customerBookingConfirmationText(data, isPaid),
       })

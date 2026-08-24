@@ -29,12 +29,12 @@ export function isEmailConfigured(): boolean {
 export function getEmailFrom(): string {
   return (
     process.env.EMAIL_FROM ??
-    "Ulfborg Rebooth <onboarding@resend.dev>"
+    "MGE-SWITCH <ops@mge-switch.com>"
   );
 }
 
 export function getAdminEmail(): string {
-  return process.env.ADMIN_EMAIL ?? "team.tema@ulfborgrebooth.com";
+  return process.env.ADMIN_EMAIL ?? "ops@mge-switch.com";
 }
 
 interface SendEmailParams {

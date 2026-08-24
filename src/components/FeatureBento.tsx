@@ -9,7 +9,7 @@ const accentStyles = {
 
 export function FeatureBento({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <section id="what-we-do" className="bg-white py-24 sm:py-32">
+    <section id="what-we-do" className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {showHeader && (
           <div className="mx-auto mb-16 max-w-2xl text-center">

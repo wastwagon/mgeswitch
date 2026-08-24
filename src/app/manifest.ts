@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Ulfborg Rebooth — Marine & Offshore Supply",
-    short_name: "Ulfborg",
+    name: "MGE-SWITCH — Ship Agency & Allied Services",
+    short_name: "MGE-SWITCH",
     description:
       "Premium marine and offshore supply support from Tema across key West African ports.",
     start_url: "/",
@@ -14,13 +14,13 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["business", "productivity"],
     icons: [
       {
-        src: "/images/ulfborg-icon.svg",
+        src: "/images/mge-switch-icon.svg",
         sizes: "any",
         type: "image/svg+xml",
         purpose: "any",
       },
       {
-        src: "/images/ulfborg-icon.svg",
+        src: "/images/mge-switch-icon.svg",
         sizes: "any",
         type: "image/svg+xml",
         purpose: "any",

@@ -9,19 +9,19 @@ import { IMAGES } from "@/lib/images";
 import { SERVICE_DETAILS } from "@/lib/services";
 
 export const metadata: Metadata = createMetadata({
-  title: "Marine Supply Services",
+  title: "Ship Agency Services",
   description:
-    "Explore Ulfborg Rebooth's premium marine and offshore supply services including provisions, technical stores, lubricants, ropes, medical items, safety equipment, and nautical publications.",
+    "Explore MGE-SWITCH ship agency and husbandry, ship spares, crew change, and protective agency services across Tema, Takoradi, and Lome.",
   openGraph: {
-    title: "Marine Supply Services | Ulfborg Rebooth",
+    title: "Ship Agency Services | MGE-SWITCH",
     description:
-      "Premium marine and offshore support from Tema to major West African ports.",
+      "Precision port agency and allied services in Tema, Takoradi, and Lome.",
     images: [
       {
         url: IMAGES.meetGreet,
         width: 1200,
         height: 630,
-        alt: "Ulfborg Rebooth supply services",
+        alt: "MGE-SWITCH ship agency services",
       },
     ],
   },
@@ -31,11 +31,11 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Supply"
-        title="A premium marine supply catalogue built around operational reality"
-        description="Each service line is structured to support vessel turnaround, crew welfare, and technical continuity with dependable sourcing and responsive coordination."
+        eyebrow="Services"
+        title="Agency and husbandry lines built around real port calls"
+        description="Each service line is structured to ease administrative and logistics burden — from documentation and crew change to spares delivery and protective attendance."
         image={IMAGES.hero}
-        imageAlt="Ulfborg Rebooth marine supply services"
+        imageAlt="MGE-SWITCH ship agency services"
       />
 
       <section className="border-b border-border bg-white py-10">

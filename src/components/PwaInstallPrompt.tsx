@@ -19,7 +19,7 @@ export function PwaInstallPrompt({ hasBottomNav = true }: PwaInstallPromptProps)
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("ulfborg:pwa-dismissed")) {
+    if (sessionStorage.getItem("mgeswitch:pwa-dismissed")) {
       queueMicrotask(() => setDismissed(true));
       return;
     }
@@ -40,12 +40,12 @@ export function PwaInstallPrompt({ hasBottomNav = true }: PwaInstallPromptProps)
     const { outcome } = await deferred!.userChoice;
     if (outcome === "accepted") setDeferred(null);
     setDismissed(true);
-    sessionStorage.setItem("ulfborg:pwa-dismissed", "1");
+    sessionStorage.setItem("mgeswitch:pwa-dismissed", "1");
   }
 
   function dismiss() {
     setDismissed(true);
-    sessionStorage.setItem("ulfborg:pwa-dismissed", "1");
+    sessionStorage.setItem("mgeswitch:pwa-dismissed", "1");
   }
 
   return (
@@ -63,7 +63,7 @@ export function PwaInstallPrompt({ hasBottomNav = true }: PwaInstallPromptProps)
         <div className="min-w-0 flex-1">
           <p className="text-sm font-semibold text-white">Add to Home Screen</p>
           <p className="mt-0.5 text-xs text-white/70">
-            Install Ulfborg Rebooth for quick access to ports, supply services,
+            Install MGE-SWITCH for quick access to ports, supply services,
             and contact details.
           </p>
           <div className="mt-3 flex gap-2">

@@ -30,8 +30,8 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   contact_email: BRAND.email,
   contact_address: BRAND.address,
   seo_default_description:
-    "Ulfborg Rebooth is a Ghanaian marine and offshore supply firm supporting vessels with provisions, technical stores, lubricants, nautical publications, and responsive West African port coverage.",
-  seo_og_image: "/images/ulfborg-og.svg",
+    "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
+  seo_og_image: "/images/mge-switch-og.svg",
   social_facebook: "",
   social_instagram: "",
   social_linkedin: "",

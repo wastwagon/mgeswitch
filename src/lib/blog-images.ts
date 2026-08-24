@@ -1,32 +1,31 @@
-export interface BlogImageMeta {
-  image: string;
-  imageAlt: string;
-}
-
-export const BLOG_IMAGES: Record<string, BlogImageMeta> = {
-  "how-fast-vessel-supply-support-protects-turnaround": {
-    image: "/gallery/ulfborg-ship-provisions-container-01.jpeg",
-    imageAlt: "Ulfborg Rebooth marine supply cargo staged inside a shipping container",
+const BLOG_IMAGE_MAP: Record<
+  string,
+  { image: string; imageAlt: string }
+> = {
+  "why-precise-port-agency-protects-vessel-turnaround": {
+    image: "/gallery/mge-ship-agency-port-01.png",
+    imageAlt: "Ship agency coordination at a West African commercial port",
   },
-  "what-good-marine-provisioning-looks-like-in-west-africa": {
-    image: "/gallery/ulfborg-marine-cabin-stores-02.jpeg",
-    imageAlt: "Marine provisions and cabin stores prepared for vessel delivery",
+  "crew-change-essentials-in-tema-takoradi-and-lome": {
+    image: "/gallery/mge-crew-change-03.png",
+    imageAlt: "Crew change logistics at harbour gangway",
   },
-  "nautical-publications-and-why-bridge-teams-cannot-compromise": {
-    image: "/images/ulfborg-nautical.svg",
-    imageAlt: "Nautical publications and navigation planning materials",
-  },
-  "choosing-lubricants-and-consumables-for-harsh-marine-environments": {
-    image: "/images/ulfborg-lubricants.svg",
-    imageAlt: "Marine lubricants and consumables for harsh operating conditions",
+  "protective-agency-when-owners-need-independent-cover": {
+    image: "/gallery/mge-protective-agency-04.png",
+    imageAlt: "Protective agency attendance during vessel turnaround",
   },
 };
 
-export function getBlogImageMeta(slug: string, fallbackTitle: string): BlogImageMeta {
+const FALLBACK = {
+  image: "/gallery/mge-port-operations-hero-05.png",
+  imageAlt: "MGE-SWITCH port operations",
+};
+
+export function getBlogImageMeta(slug: string, title: string) {
   return (
-    BLOG_IMAGES[slug] ?? {
-      image: "/gallery/ulfborg-ship-provisions-container-01.jpeg",
-      imageAlt: fallbackTitle,
+    BLOG_IMAGE_MAP[slug] ?? {
+      image: FALLBACK.image,
+      imageAlt: title || FALLBACK.imageAlt,
     }
   );
 }

@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo — local representatives for shipowners, charterers, and operators of all vessel types.",
   url: siteUrl,
-  ogImage: "/images/ulfborg-og.svg",
+  ogImage: "/images/mge-switch-og.svg",
   twitterHandle: "",
   locale: "en_GH",
 } as const;
@@ -34,8 +34,8 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
     authors: [{ name: siteConfig.name }],
     creator: siteConfig.name,
     icons: {
-      icon: "/images/ulfborg-icon.svg",
-      apple: "/images/ulfborg-icon.svg",
+      icon: "/images/mge-switch-icon.svg",
+      apple: "/images/mge-switch-icon.svg",
     },
     openGraph: {
       type: "website",

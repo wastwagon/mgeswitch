@@ -20,11 +20,11 @@ export function Logo({
     <Link href="/" className={cn("flex items-center gap-3", className)}>
       <div
         className={cn(
-          "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl",
-          isLight ? "gradient-navy ring-1 ring-white/10" : "gradient-navy shadow-md"
+          "flex h-10 w-10 shrink-0 items-center justify-center rounded-sm",
+          isLight ? "bg-gold" : "bg-navy"
         )}
       >
-        <Anchor className="h-5 w-5 text-gold" />
+        <Anchor className={cn("h-5 w-5", isLight ? "text-navy" : "text-gold")} />
       </div>
       <div className="leading-tight">
         <span

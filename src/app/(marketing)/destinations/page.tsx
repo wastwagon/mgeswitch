@@ -8,12 +8,12 @@ import { IMAGES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "Ports & Coverage",
   description:
-    "Discover Ulfborg Rebooth's operational footprint across Tema, Takoradi, Lome, Cotonou, Apapa, and Monrovia.",
+    "Discover MGE-SWITCH's operational footprint across Tema, Takoradi, Lome, Cotonou, Apapa, and Monrovia.",
   openGraph: {
-    title: "Ports & Coverage | Ulfborg Rebooth",
+    title: "Ports & Coverage | MGE-SWITCH",
     description:
-      "A Ghana-based marine supply network serving key West African ports.",
-    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "Ulfborg Rebooth port coverage" }],
+      "A Ghana-based ship agency network serving key West African ports.",
+    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "MGE-SWITCH port coverage" }],
   },
 });
 
@@ -25,7 +25,7 @@ export default function DestinationsPage() {
         title="A responsive West African port network"
         description="Our core Ghana presence is reinforced by branch and operational support points across West Africa, giving clients continuity beyond a single call."
         image={IMAGES.hero}
-        imageAlt="Ulfborg Rebooth ports and regional network"
+        imageAlt="MGE-SWITCH ports and regional network"
         minHeight="min-h-[42vh]"
       />
       <DestinationsExplorer showHeader={false} />

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1B365D;
-  --navy: #1B365D;
-  --navy-dark: #0F2340;
-  --gold: #C9A227;
-  --gold-light: #E8C547;
-  --light-blue: #4DA6FF;
-  --light-blue-bg: #E8F4FC;
-  --muted: #64748b;
-  --border: #e2e8f0;
+  --background: #f3efe6;
+  --foreground: #14221f;
+  --navy: #0e3d3a;
+  --navy-dark: #0a2a28;
+  --gold: #e07a2f;
+  --gold-light: #f08a42;
+  --light-blue: #2a9b8f;
+  --light-blue-bg: #e6f0ea;
+  --muted: #5c6b67;
+  --border: #ddd4c4;
 }
 
 @theme inline {
@@ -25,7 +25,7 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-display), Georgia, serif;
+  --font-display: var(--font-display);
 }
 
 * {
@@ -87,17 +87,17 @@ body {
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(243, 239, 230, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
 
   .gradient-navy {
-    background: linear-gradient(135deg, #1B365D 0%, #0F2340 100%);
+    background: #0a2a28;
   }
 
   .gradient-gold {
-    background: linear-gradient(135deg, #C9A227 0%, #E8C547 100%);
+    background: #e07a2f;
   }
 
   .bg-gold,

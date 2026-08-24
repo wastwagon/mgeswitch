@@ -18,26 +18,21 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const brand = useBrand();
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/90 backdrop-blur-xl safe-top">
+      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl safe-top">
+        <div className="h-1 bg-gold" />
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-[4.5rem] sm:px-6">
-          <Logo variant="light" />
+          <Logo variant="dark" />
 
           <nav className="hidden items-center gap-8 lg:flex">
             {mainNav.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] font-semibold uppercase tracking-widest text-white/70 transition hover:text-gold"
+                className="text-[11px] font-semibold uppercase tracking-widest text-navy/70 transition hover:text-gold"
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/login"
-              className="border border-gold/60 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-widest text-gold transition hover:bg-gold hover:text-white"
-            >
-              Admin
-            </Link>
             <Link
               href="/corporate"
               className="bg-gold px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest text-white transition hover:bg-gold-light hover:text-white"
@@ -49,7 +44,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
-            className="flex min-h-[44px] min-w-[44px] items-center justify-center text-white lg:hidden"
+            className="flex min-h-[44px] min-w-[44px] items-center justify-center text-navy lg:hidden"
             aria-label="Open menu"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -59,7 +54,6 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         </div>
       </header>
 
-      {/* Full-screen mobile menu — iOS sheet pattern */}
       <div
         className={cn(
           "fixed inset-0 z-[60] lg:hidden",
@@ -70,7 +64,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         <button
           type="button"
           className={cn(
-            "absolute inset-0 bg-navy/80 backdrop-blur-sm transition-opacity duration-300",
+            "absolute inset-0 bg-navy-dark/70 backdrop-blur-sm transition-opacity duration-300",
             menuOpen ? "opacity-100" : "opacity-0"
           )}
           onClick={() => setMenuOpen(false)}
@@ -78,7 +72,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         />
         <nav
           className={cn(
-            "absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-navy shadow-2xl transition-transform duration-300 ease-out safe-top safe-bottom",
+            "absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-navy-dark shadow-2xl transition-transform duration-300 ease-out safe-top safe-bottom",
             menuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -103,7 +97,7 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
                 className="flex min-h-[52px] items-center justify-between border-b border-white/5 px-3 text-base font-medium text-white/90 active:bg-white/5"
               >
                 {link.label}
-                <ArrowRight className="h-4 w-4 text-gold/60" />
+                <ArrowRight className="h-4 w-4 text-gold/70" />
               </Link>
             ))}
             <a
@@ -123,13 +117,6 @@ export function Header({ menuOpen, setMenuOpen }: HeaderProps) {
             >
               Send Supply Enquiry
               <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/login"
-              onClick={() => setMenuOpen(false)}
-              className="flex min-h-[48px] w-full items-center justify-center border border-white/20 text-xs font-semibold uppercase tracking-widest text-white/80"
-            >
-              Admin Sign In
             </Link>
           </div>
         </nav>

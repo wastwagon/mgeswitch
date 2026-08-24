@@ -56,6 +56,29 @@ export const TESTIMONIALS = [
   },
 ] as const;
 
+export const FOOTER_PROOF = [
+  {
+    id: "registered",
+    title: "Registered Ghanaian agency",
+    detail: "Tema and Takoradi, with allied cover in Lome",
+  },
+  {
+    id: "owners",
+    title: "Owner representation",
+    detail: "Independent attendance for owners, charterers, and operators",
+  },
+  {
+    id: "ports",
+    title: "Three-port network",
+    detail: "Tema · Takoradi · Lome, coordinated as one desk",
+  },
+  {
+    id: "response",
+    title: "Always-on operations",
+    detail: "Port-call response organised around ETA, not office hours",
+  },
+] as const;
+
 export const CREDENTIALS = [
   {
     id: "licensed",

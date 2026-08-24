@@ -184,7 +184,7 @@ export function AdminBookingForm({ mode, initial, vehicles }: AdminBookingFormPr
           </h1>
           <p className="mt-1 text-sm text-muted">
             {mode === "create"
-              ? "Create a marine supply request for phone, walk-in, or corporate clients"
+              ? "Create a ship agency enquiry for phone, walk-in, or corporate clients"
               : "Update request details, status, and internal notes"}
           </p>
         </div>

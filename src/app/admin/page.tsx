@@ -76,7 +76,7 @@ export default async function AdminPage() {
             Requests Overview
           </h1>
           <p className="mt-1 text-sm text-muted">
-            Manage marine supply requests, payments, and fulfilment status
+            Manage ship agency enquiries, payments, and fulfilment status
           </p>
         </div>
         <Link

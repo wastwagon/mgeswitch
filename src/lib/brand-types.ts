@@ -41,7 +41,7 @@ export function mapSettingsToBrand(settings: BrandSettingsInput): BrandConfig {
     email: settings.contact_email,
     address: settings.contact_address,
     seoDescription: settings.seo_default_description,
-    ogImage: settings.seo_og_image || "/images/og-preview.png",
+    ogImage: settings.seo_og_image || "/images/mge-switch-og.svg",
     maintenanceMode: settings.maintenance_mode === "true",
     maintenanceMessage:
       settings.maintenance_message ||
@@ -56,16 +56,17 @@ export function mapSettingsToBrand(settings: BrandSettingsInput): BrandConfig {
 
 /** Static fallback for client components before hydration */
 export const STATIC_BRAND: BrandConfig = {
-  name: "Ulfborg Rebooth",
-  tagline: "Premium Marine & Offshore Supply Solutions",
-  phone: process.env.NEXT_PUBLIC_PHONE ?? "+233 596 092 689",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233596092689",
-  email: "team.tema@ulfborgrebooth.com",
+  name: "MGE-SWITCH",
+  tagline: "Ship Agency & Allied Services",
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "+233 000 000 000",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "233000000000",
+  email: "ops@mge-switch.com",
   address:
-    process.env.NEXT_PUBLIC_ADDRESS ?? "Heavy Industrial Area Enclave, Tema, Ghana",
+    process.env.NEXT_PUBLIC_ADDRESS ??
+    "Tema & Takoradi Ports, Ghana · Lome, Togo",
   seoDescription:
-    "A Ghanaian marine and offshore supply company delivering technical stores, provisions, and vessel support across West African ports.",
-  ogImage: "/images/ulfborg-og.svg",
+    "MGE-SWITCH is a registered Ghanaian ship agency and allied services provider operating in Tema and Takoradi Ports of Ghana and Lome, Togo.",
+  ogImage: "/images/mge-switch-og.svg",
   maintenanceMode: false,
   maintenanceMessage: "",
   social: { facebook: "", instagram: "", linkedin: "" },

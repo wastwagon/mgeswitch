@@ -1,82 +1,67 @@
 import {
-  ShieldCheck,
   BadgeCheck,
-  Car,
-  Building2,
-  Clock,
-  Receipt,
+  Users,
+  MapPinned,
+  Radio,
+  ClipboardCheck,
+  Compass,
 } from "lucide-react";
 import { CREDENTIALS } from "@/lib/trust";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
   licensed: BadgeCheck,
-  insured: ShieldCheck,
-  registered: Building2,
-  "secure-pay": Receipt,
-  support: Clock,
-  "fixed-fare": Car,
+  insured: Users,
+  registered: MapPinned,
+  "secure-pay": Radio,
+  "crew-focus": ClipboardCheck,
+  premium: Compass,
 } as const;
 
 interface CredibilityBadgesProps {
   variant?: "light" | "dark";
-  compact?: boolean;
 }
 
 export function CredibilityBadges({
   variant = "light",
-  compact = false,
 }: CredibilityBadgesProps) {
   const isDark = variant === "dark";
 
   return (
-    <div
-      className={cn(
-        "grid gap-4",
-        compact ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-6" : "sm:grid-cols-2 lg:grid-cols-3"
-      )}
-    >
-      {CREDENTIALS.map((cred) => {
-        const Icon = iconMap[cred.id as keyof typeof iconMap] ?? ShieldCheck;
+    <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      {CREDENTIALS.map((cred, index) => {
+        const Icon = iconMap[cred.id as keyof typeof iconMap] ?? BadgeCheck;
         return (
-          <div
+          <article
             key={cred.id}
-            className={cn(
-              "flex gap-3 border p-4",
-              isDark
-                ? "border-white/15 bg-white/5"
-                : "border-border bg-white"
-            )}
+            className="border-t border-gold/50 pt-5"
           >
-            <div
+            <div className="flex items-center justify-between">
+              <Icon
+                className={cn("h-5 w-5", isDark ? "text-gold" : "text-navy")}
+                strokeWidth={1.6}
+              />
+              <span className="font-display text-sm text-gold">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
+            <h3
               className={cn(
-                "flex h-10 w-10 shrink-0 items-center justify-center",
-                isDark ? "bg-gold text-white" : "bg-navy/5 text-navy"
+                "mt-4 font-display text-xl font-semibold leading-snug",
+                isDark ? "text-white" : "text-navy"
               )}
             >
-              <Icon className="h-5 w-5" />
-            </div>
-            <div>
-              <p
-                className={cn(
-                  "text-sm font-semibold",
-                  isDark ? "text-white" : "text-navy"
-                )}
-              >
-                {cred.title}
-              </p>
-              {!compact && (
-                <p
-                  className={cn(
-                    "mt-1 text-xs leading-relaxed",
-                    isDark ? "text-white/70" : "text-muted"
-                  )}
-                >
-                  {cred.description}
-                </p>
+              {cred.title}
+            </h3>
+            <p
+              className={cn(
+                "mt-2 text-sm leading-relaxed",
+                isDark ? "text-white/65" : "text-muted"
               )}
-            </div>
-          </div>
+            >
+              {cred.description}
+            </p>
+          </article>
         );
       })}
     </div>

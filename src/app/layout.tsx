@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-white font-sans text-navy antialiased">
+      <body className="flex min-h-full flex-col bg-background font-sans text-navy antialiased">
         {children}
       </body>
     </html>

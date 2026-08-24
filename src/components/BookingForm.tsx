@@ -106,9 +106,9 @@ export function BookingForm() {
   ]);
 
   useEffect(() => {
-    const stored = sessionStorage.getItem("ulfborg:prefill-destination");
+    const stored = sessionStorage.getItem("mgeswitch:prefill-destination");
     if (!stored) return;
-    sessionStorage.removeItem("ulfborg:prefill-destination");
+    sessionStorage.removeItem("mgeswitch:prefill-destination");
     const type = watch("type");
     if (type === "PICKUP") {
       setValue("dropoffLocation", stored);
@@ -126,9 +126,9 @@ export function BookingForm() {
         setValue("pickupLocation", destination);
       }
     }
-    window.addEventListener("ulfborg:prefill-destination", onPrefill);
+    window.addEventListener("mgeswitch:prefill-destination", onPrefill);
     return () =>
-      window.removeEventListener("ulfborg:prefill-destination", onPrefill);
+      window.removeEventListener("mgeswitch:prefill-destination", onPrefill);
   }, [values.type, setValue]);
 
   useEffect(() => {
@@ -270,7 +270,7 @@ export function BookingForm() {
   }
 
   if (success) {
-    const whatsappMessage = `Hello Ulfborg Rebooth! Reference ${success.reference}\nPrice: ${formatCurrency(success.price)}${success.paid ? " (PAID)" : ""}`;
+    const whatsappMessage = `Hello MGE-SWITCH! Reference ${success.reference}\nPrice: ${formatCurrency(success.price)}${success.paid ? " (PAID)" : ""}`;
     return (
       <div className="overflow-hidden border border-border bg-white shadow-xl">
         <div className="gradient-navy px-8 py-10 text-center text-white">

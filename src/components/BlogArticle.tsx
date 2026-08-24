@@ -164,7 +164,7 @@ export function BlogArticle({ post, relatedPosts }: BlogArticleProps) {
               <div className="sticky top-28 space-y-8">
                 <div className="border border-border bg-navy p-8 text-white">
                   <p className="text-[10px] font-semibold uppercase tracking-widest text-gold">
-                    Ulfborg Rebooth
+                    MGE-SWITCH
                   </p>
                   <h3 className="font-display mt-3 text-xl font-bold">
                     Premium marine support

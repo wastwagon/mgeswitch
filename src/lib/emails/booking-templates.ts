@@ -133,7 +133,7 @@ export function adminNewBookingHtml(data: BookingEmailData): string {
   return layout(`
     <h1 style="margin:0 0 8px;font-size:22px;color:#1B365D;">New Supply Request Alert</h1>
     <p style="margin:0 0 24px;font-size:14px;color:#64748b;">
-      A new marine supply request has been submitted via the website.
+      A new ship agency enquiry has been submitted via the website.
     </p>
 
     <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;">

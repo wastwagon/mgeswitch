@@ -14,7 +14,7 @@ export function FloatingWhatsApp({ aboveNav = true }: FloatingWhatsAppProps) {
   return (
     <a
       href={buildWhatsAppUrl(
-        "Hello Ulfborg Rebooth, I need support with a vessel supply request.",
+        "Hello MGE-SWITCH, I need support with a vessel supply request.",
         brand.whatsapp
       )}
       target="_blank"

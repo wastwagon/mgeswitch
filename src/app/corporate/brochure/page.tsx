@@ -68,7 +68,7 @@ export default function BrochurePage() {
         <p className="brochure-eyebrow">About Us</p>
         <h2 className="brochure-heading">A Ghanaian marine support partner with regional reach</h2>
         <p className="brochure-body">
-          Ulfborg Rebooth is an indigenous Ghanaian marine and offshore supply
+          MGE-SWITCH is an indigenous Ghanaian marine and offshore supply
           company serving vessel operators with responsive coordination,
           quality-focused sourcing, and practical port support. Headquartered in
           Tema, we extend service across Takoradi, Lome, Cotonou, Apapa, and Monrovia.

@@ -2,17 +2,23 @@ import { CredibilityBadges } from "@/components/CredibilityBadges";
 
 export function CredibilitySection() {
   return (
-    <section className="border-y border-border bg-[#fafbfc] py-16 sm:py-20">
+    <section className="border-y border-border bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mx-auto mb-10 max-w-2xl text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-            Why Ulfborg
+        <div className="max-w-2xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+            Why owners appoint us
           </p>
-          <h2 className="font-display mt-4 text-2xl font-bold text-navy sm:text-3xl">
-            Built for reliability in demanding marine operations
+          <h2 className="font-display mt-4 text-3xl font-bold text-navy sm:text-4xl">
+            Local cover with the discipline of a principal&apos;s desk
           </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted">
+            Six operating standards we hold on every call — from first nomination
+            through last line, across Tema, Takoradi, and Lome.
+          </p>
         </div>
-        <CredibilityBadges />
+        <div className="mt-14">
+          <CredibilityBadges />
+        </div>
       </div>
     </section>
   );

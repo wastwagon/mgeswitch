@@ -10,7 +10,7 @@ export function ProcessTimeline({ showHeader = true }: { showHeader?: boolean })
               How It Works
             </p>
             <h2 className="font-display mt-3 text-3xl font-bold text-navy sm:text-4xl">
-              Four steps to coordinated marine supply response
+              Four steps to coordinated ship agency response
             </h2>
           </div>
         )}

@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Enquiry Support",
   description:
-    "Legacy booking routes now point to Ulfborg Rebooth's enquiry and support experience.",
+    "Legacy booking routes now point to MGE-SWITCH's enquiry and support experience.",
 });
 
 export default function BookingStatusLayout({

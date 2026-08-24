@@ -12,40 +12,22 @@ export const dynamic = "force-dynamic";
 
 const offices = [
   {
-    name: "Head Office — Tema, Ghana",
-    address: "Heavy Industrial Area Enclave",
-    email: "team.tema@ulfborgrebooth.com",
-    phone: "+233 596 092 689",
+    name: "Tema Port — Ghana",
+    address: "Exact address coming soon",
+    email: "ops@mge-switch.com",
+    phone: "+233 000 000 000",
   },
   {
-    name: "Branch Office — Takoradi, Ghana",
-    address: "Beach Road Drive",
-    email: "team.takoradi@ulfborgrebooth.com",
-    phone: "+233",
+    name: "Takoradi Port — Ghana",
+    address: "Exact address coming soon",
+    email: "ops.takoradi@mge-switch.com",
+    phone: "+233 000 000 000",
   },
   {
-    name: "Branch Office — Monrovia, Liberia",
-    address: "Off Sufi Junction, Congo Town",
-    email: "team.monrovia@ulfborgrebooth.com",
-    phone: "+233",
-  },
-  {
-    name: "Branch Office — Cotonou, Benin",
-    address: "Boulevard La Marina Plage",
-    email: "team.cotonou@ulfborgrebooth.com",
-    phone: "+233",
-  },
-  {
-    name: "Branch Office — Lome, Togo",
-    address: "Grande Contournement Rond Point Adakpame",
-    email: "team.lome@ulfborgrebooth.com",
-    phone: "+233",
-  },
-  {
-    name: "Branch Office — Nigeria",
-    address: "Abayomi Street, Apapa",
-    email: "team.nigeria@ulfborgrebooth.com",
-    phone: "+233",
+    name: "Lome Port — Togo",
+    address: "Exact address coming soon",
+    email: "ops.lome@mge-switch.com",
+    phone: "+233 000 000 000",
   },
 ] as const;
 
@@ -53,10 +35,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const brand = await getBrandConfig();
   return createMetadata({
     title: "Contact",
-    description: `Contact ${brand.name} for marine supply coordination, technical support items, provisions, and West African port enquiries.`,
+    description: `Contact ${brand.name} for ship agency, husbandry, crew change, and protective agency support in Tema, Takoradi, and Lome.`,
     openGraph: {
       title: `Contact Us | ${brand.name}`,
-      description: `Call ${brand.phone} or WhatsApp our team for vessel supply and offshore support enquiries.`,
+      description: `Call ${brand.phone} or WhatsApp our team for vessel agency and port-call appointments.`,
       images: [{ url: IMAGES.og, width: 1200, height: 630, alt: `Contact ${brand.name}` }],
     },
   });
@@ -69,8 +51,8 @@ export default async function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Speak with a marine supply team that understands urgency"
-        description="Reach our Tema base or branch points across West Africa for vessel stores, offshore support, and procurement coordination."
+        title="Speak with a ship agency team that understands urgency"
+        description="Reach MGE-SWITCH for appointments in Tema, Takoradi, and Lome — agency, husbandry, crew change, spares, and protective cover."
         image={IMAGES.meetGreet}
         imageAlt={`Contact ${brand.name}`}
         minHeight="min-h-[42vh]"
@@ -137,7 +119,7 @@ export default async function ContactPage() {
                   </p>
                   <a
                     href={buildWhatsAppUrl(
-                      "Hello Ulfborg Rebooth, I would like to discuss a vessel supply requirement.",
+                      "Hello MGE-SWITCH, I would like to discuss a vessel supply requirement.",
                       brand.whatsapp
                     )}
                     target="_blank"

@@ -32,7 +32,7 @@ export function MobileBottomNav({ onMenuOpen }: MobileBottomNavProps) {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-navy/95 backdrop-blur-xl touch-manipulation lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-xl touch-manipulation lg:hidden"
       aria-label="Primary navigation"
     >
       <div className="mx-auto flex max-w-lg items-stretch safe-bottom">
@@ -44,7 +44,7 @@ export function MobileBottomNav({ onMenuOpen }: MobileBottomNavProps) {
               href={tab.href}
               className={cn(
                 "flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-0.5 py-2 transition active:scale-95",
-                active ? "text-gold" : "text-white/60"
+                active ? "text-gold" : "text-navy/45"
               )}
             >
               <tab.icon className="h-5 w-5" strokeWidth={active ? 2.5 : 2} />
@@ -54,7 +54,7 @@ export function MobileBottomNav({ onMenuOpen }: MobileBottomNavProps) {
         })}
         <a
           href={buildWhatsAppUrl(
-            "Hello Ulfborg Rebooth, I need support with a vessel supply request."
+            "Hello MGE-SWITCH, I need support with a vessel supply request."
           )}
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export function MobileBottomNav({ onMenuOpen }: MobileBottomNavProps) {
         <button
           type="button"
           onClick={onMenuOpen}
-          className="flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-white/60 transition active:scale-95"
+          className="flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-0.5 py-2 text-navy/45 transition active:scale-95"
           aria-label="Open menu"
         >
           <Menu className="h-5 w-5" />

@@ -62,7 +62,7 @@ export function BookingDetailSheet({ booking, onClose }: BookingDetailSheetProps
     setTimeout(() => setCopied(false), 2000);
   }
 
-  const whatsappMsg = `Hi ${booking.customerName}, regarding your Ulfborg Rebooth request ${booking.reference}.`;
+  const whatsappMsg = `Hi ${booking.customerName}, regarding your MGE-SWITCH request ${booking.reference}.`;
 
   return (
     <div className="fixed inset-0 z-[100] lg:hidden">

@@ -9,11 +9,11 @@ import { IMAGES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "How We Work",
   description:
-    "How Ulfborg Rebooth receives, sources, coordinates, and delivers marine supply requirements.",
+    "How MGE-SWITCH receives, sources, coordinates, and delivers ship agency requirements.",
   openGraph: {
-    title: "How We Work | Ulfborg Rebooth",
-    description: "Four simple steps to responsive marine supply execution.",
-    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "How Ulfborg Rebooth works" }],
+    title: "How We Work | MGE-SWITCH",
+    description: "Four simple steps to responsive ship agency execution.",
+    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "How MGE-SWITCH works" }],
   },
 });
 
@@ -25,7 +25,7 @@ export default function HowItWorksPage() {
         title="Four steps to coordinated vessel support"
         description="From receiving your requirement to final delivery planning, our process is built around speed, clarity, and dependable execution."
         image={IMAGES.hero}
-        imageAlt="How Ulfborg Rebooth works"
+        imageAlt="How MGE-SWITCH works"
         minHeight="min-h-[42vh]"
       />
       <ProcessTimeline showHeader={false} />

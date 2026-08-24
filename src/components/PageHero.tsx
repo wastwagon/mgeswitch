@@ -15,31 +15,34 @@ export function PageHero({
   description,
   image,
   imageAlt,
-  minHeight = "min-h-[40vh] sm:min-h-[50vh]",
+  minHeight = "min-h-[36vh] sm:min-h-[44vh]",
 }: PageHeroProps) {
   return (
-    <section className={`relative flex ${minHeight} items-end overflow-hidden`}>
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/75 to-navy/35" />
-      <div className="relative mx-auto w-full max-w-7xl px-4 pb-14 pt-28 sm:px-6 sm:pb-20 sm:pt-32">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">
-          {eyebrow}
-        </p>
-        <h1 className="font-display mt-4 max-w-3xl text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-          {title}
-        </h1>
-        {description && (
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-            {description}
+    <section className="border-b border-border bg-background">
+      <div className="mx-auto grid max-w-7xl lg:grid-cols-12">
+        <div className="flex flex-col justify-end px-4 py-12 sm:px-6 sm:py-16 lg:col-span-5 lg:py-20">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
+            {eyebrow}
           </p>
-        )}
+          <h1 className="font-display mt-4 max-w-xl text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
+            {title}
+          </h1>
+          {description && (
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
+              {description}
+            </p>
+          )}
+        </div>
+        <div className={`relative ${minHeight} lg:col-span-7`}>
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 58vw"
+          />
+        </div>
       </div>
     </section>
   );
